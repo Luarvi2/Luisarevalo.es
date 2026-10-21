@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luis Arévalo Villa · KI, Operations und Flugzeuge</title>
+<meta name="description" content="Luft- und Raumfahrtingenieur in Madrid. Ich schreibe darüber, was ich lerne, wenn ich KI nutze, um besser zu arbeiten.">
+<link rel="canonical" href="https://luisarevalo.es/de/">
+<link rel="alternate" hreflang="es" href="https://luisarevalo.es/">
+<link rel="alternate" hreflang="en" href="https://luisarevalo.es/en/">
+<link rel="alternate" hreflang="de" href="https://luisarevalo.es/de/">
+<link rel="alternate" hreflang="x-default" href="https://luisarevalo.es/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Luis Arévalo Villa · KI, Operations und Flugzeuge">
+<meta property="og:description" content="Luft- und Raumfahrtingenieur in Madrid. Ich schreibe darüber, was ich lerne, wenn ich KI nutze, um besser zu arbeiten.">
+<meta property="og:url" content="https://luisarevalo.es/de/">
+<meta property="og:image" content="https://luisarevalo.es/foto-luis.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: una sola columna estrecha tipo cuaderno de laboratorio; márgenes con etiquetas en mono, el blog es el corazón */
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --ink: #17212b;
+  --muted: #5a6573;
+  --line: #dde1e7;
+  --accent: #1f5fd1;
+  --accent-soft: #e3ecfb;
+  --note: #b8860b;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11161c; --surface: #18202a; --ink: #e6eaf0; --muted: #9aa5b3;
+    --line: #2a3441; --accent: #7aa7ff; --accent-soft: #1c2b45; --note: #e0b24a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11161c; --surface: #18202a; --ink: #e6eaf0; --muted: #9aa5b3;
+  --line: #2a3441; --accent: #7aa7ff; --accent-soft: #1c2b45; --note: #e0b24a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.65; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 46rem; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .8rem; flex-wrap: wrap; }
+.brand { font-family: var(--display); font-weight: 700; font-size: 1.1rem; color: var(--ink); text-decoration: none; }
+nav { display: flex; gap: 1.1rem; flex-wrap: wrap; font-family: var(--mono); font-size: .8rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+.langs { display: flex; gap: .45rem; padding-left: .9rem; border-left: 1px solid var(--line); }
+.langs a[aria-current="true"] { color: var(--ink); font-weight: 500; }
+
+.label { font-family: var(--mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); font-weight: 700; letter-spacing: -.02em; }
+h2 { font-size: 1.7rem; font-weight: 700; letter-spacing: -.01em; }
+h3 { font-size: 1.2rem; font-weight: 500; }
+p { margin: 0; }
+
+section { padding-block: 3.5rem; border-bottom: 1px solid var(--line); }
+section .wrap { display: grid; gap: 1.2rem; }
+
+.hero { padding-block: 4rem 3rem; }
+.hero .wrap { grid-template-columns: 1fr 13rem; align-items: center; column-gap: 2.5rem; }
+.hero .intro { display: grid; gap: 1.2rem; min-width: 0; }
+.hero .photo { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); }
+@media (max-width: 640px) { .hero .wrap { grid-template-columns: 1fr; } .hero .photo { width: 9rem; order: -1; border-radius: 50%; aspect-ratio: 1; object-position: 50% 20%; } }
+.hero .lede { font-size: 1.25rem; color: var(--muted); max-width: 36rem; }
+.hero .lede em { color: var(--ink); }
+.actions { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: .6rem; }
+.btn { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--mono); font-size: .85rem; padding: .65rem 1rem; border-radius: 6px; text-decoration: none; border: 1px solid var(--accent); }
+.btn.primary { background: var(--accent); color: var(--surface); }
+.btn.ghost { color: var(--accent); background: transparent; }
+.btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+.placeholder { background: var(--accent-soft); border-radius: 3px; padding: 0 .25em; }
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0; list-style: none; }
+.tags li { font-family: var(--mono); font-size: .78rem; padding: .25rem .6rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+
+.timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+.timeline li { display: grid; grid-template-columns: 8.5rem 1fr; gap: 1rem; padding-block: 1.1rem; border-top: 1px dashed var(--line); }
+.timeline li:first-child { border-top: 0; }
+.timeline .when { font-family: var(--mono); font-size: .8rem; color: var(--muted); padding-top: .2rem; font-variant-numeric: tabular-nums; }
+.timeline .what { min-width: 0; display: grid; gap: .3rem; }
+.timeline .org { color: var(--muted); font-size: .95rem; }
+
+.posts { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+.posts li { border-top: 1px solid var(--line); }
+.posts li:last-child { border-bottom: 1px solid var(--line); }
+.post-link { display: grid; grid-template-columns: 6.5rem 1fr; gap: 1rem; padding-block: 1.1rem; text-decoration: none; color: inherit; }
+.post-link:hover h3 { color: var(--accent); }
+.post-link .date { font-family: var(--mono); font-size: .8rem; color: var(--muted); padding-top: .2rem; font-variant-numeric: tabular-nums; }
+.post-link .body { display: grid; gap: .3rem; min-width: 0; }
+.post-link p { color: var(--muted); font-size: .95rem; }
+.soon { font-family: var(--mono); font-size: .7rem; color: var(--note); letter-spacing: .06em; text-transform: uppercase; }
+
+/* Artículo */
+article .wrap { gap: 1.4rem; }
+.back { font-family: var(--mono); font-size: .8rem; text-decoration: none; }
+.meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: .8rem 1.5rem; padding: 1rem 1.2rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.meta div { display: grid; gap: .1rem; }
+.meta strong { font-family: var(--mono); font-weight: 500; font-size: .9rem; }
+article h2 { font-size: 1.35rem; margin-top: .8rem; }
+.prompt { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; padding: 1rem 1.1rem; font-family: var(--mono); font-size: .85rem; line-height: 1.6; white-space: pre-wrap; overflow-x: auto; }
+.prompt .label { display: block; margin-bottom: .4rem; }
+article ol, article ul { margin: 0; padding-left: 1.3rem; display: grid; gap: .4rem; }
+.aside { border-left: 3px solid var(--note); padding-left: 1rem; color: var(--muted); font-style: italic; }
+
+.contact .wrap { gap: 1rem; }
+footer { padding-block: 2rem 3rem; font-family: var(--mono); font-size: .78rem; color: var(--muted); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+
+@media (max-width: 520px) {
+  .timeline li, .post-link { grid-template-columns: 1fr; gap: .3rem; }
+  nav { gap: .8rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Luis Arévalo Villa</a>
+    <nav aria-label="Bereiche">
+      <a href="#sobre-mi">Über mich</a>
+      <a href="#experiencia">Werdegang</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Kontakt</a>
+      <span class="langs" aria-label="Idioma / Language / Sprache"><a href="../" hreflang="es" lang="es">ES</a><a href="../en/" hreflang="en" lang="en">EN</a><a href="../de/" hreflang="de" lang="de" aria-current="true">DE</a></span>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div class="intro">
+      <span class="label">Luft- und Raumfahrtingenieur · Madrid</span>
+      <h1>Hallo, ich bin Luis.</h1>
+      <p class="lede">Schon als Kind wollte ich verstehen, wie Dinge funktionieren, und sie nutzen, um das Leben leichter zu machen. Angefangen hat es mit Flugzeugen und Motoren, heute mache ich es mit künstlicher Intelligenz. Hier schreibe ich darüber, <em>was ich lerne, wenn ich KI nutze, um besser zu arbeiten</em>: was funktioniert, was nicht und wie ich es mache.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.linkedin.com/in/luisarevalo-" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3V9.5zm7 0h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4V9.5z"/></svg>
+          Mein LinkedIn
+        </a>
+        <a class="btn ghost" href="#blog">Zum Blog</a>
+      </div>
+      </div>
+      <img class="photo" src="../foto-luis.jpg" alt="Porträt von Luis Arévalo Villa">
+    </div>
+  </section>
+
+  <section id="sobre-mi">
+    <div class="wrap">
+      <span class="label">Über mich</span>
+      <h2>Alles begann mit dem Auseinanderschrauben</h2>
+      <p>Als Kind haben mich Maschinen fasziniert. Flugzeuge, Motoren, jedes Gerät, das ich in die Finger bekam und aufmachen konnte, um zu sehen, was drin ist. Ich habe gern Dinge repariert, und fast noch lieber verstanden, warum sie funktionieren.</p>
+      <p>Mit Computern war es genauso. Sie nur zu benutzen, reichte mir nicht: Ich wollte wissen, wie sie denken und was ich mit ihnen machen kann. Schon früh war mir eine Idee klar, die mich bis heute begleitet: Technik lohnt sich, wenn sie jemandem das Leben leichter macht.</p>
+      <p>Diese Neugier hat mich von der Entwicklung von Elektroautos zur Digitalisierung von Kampfflugzeugprogrammen geführt, und von dort zum Aufbau eines KI-nativen Unternehmens von Grund auf. Heute ist künstliche Intelligenz meine neue Maschine zum Auseinanderschrauben. Diese Seite ist mein Werkstattheft: Hier teile ich, was ich lerne, mit echten Beispielen, für alle, die mitlernen wollen.</p>
+      <ul class="tags" aria-label="Themen, über die ich schreibe">
+        <li>KI im Arbeitsalltag</li><li>Operations und Teams</li><li>Digitale Transformation</li><li>Flugzeuge und Maschinen</li><li>Lernen durch Machen</li>
+      </ul>
+      <p style="color:var(--muted);font-size:.95rem">Ich spreche Spanisch, Englisch und Deutsch. Wenn ich nicht am Rechner sitze, bin ich mit dem Mountainbike unterwegs, beim Schwimmen oder restauriere zu Hause ein altes Fahrrad.</p>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <div class="wrap">
+      <span class="label">Mein Weg</span>
+      <h2>Von Maschinen zu Menschen</h2>
+      <ol class="timeline">
+        <li>
+          <span class="when">2011 — 2020</span>
+          <div class="what"><h3>Verstehen, wie ein Flugzeug fliegt</h3><span class="org">Valencia und München</span><p>Ich habe Luft- und Raumfahrttechnik an der Universitat Politècnica de València studiert und danach den Master an der Technischen Universität München gemacht. Meine Abschlussarbeiten handelten von Raketenantrieben und später, bei Rolls-Royce, vom elektrischen Flugzeugantrieb. Immer noch das Kind, das Flugzeuge liebt, nur mit deutlich mehr Mathematik.</p></div>
+        </li>
+        <li>
+          <span class="when">2016 — 2018</span>
+          <div class="what"><h3>Meine ersten echten Maschinen</h3><span class="org">BMW Group · München</span><p>Bei BMW habe ich Antriebs- und Batteriesysteme für Elektroautos konstruiert. Endlich habe ich Geräte nicht mehr nur aufgemacht, sondern gebaut. Dort habe ich gelernt, dass das beste Bauteil nichts nützt, wenn der Prozess drumherum nicht funktioniert.</p></div>
+        </li>
+        <li>
+          <span class="when">2021 — 2024</span>
+          <div class="what"><h3>Anderen die Arbeit leichter machen</h3><span class="org">MEWS Partners, Panavia und Eurofighter · München</span><p>Meine Neugier verlagerte sich von den Maschinen zu der Frage, wie Menschen mit ihnen arbeiten. In den Programmen Tornado und Eurofighter habe ich zusammen mit der NATO digitale Werkzeuge vorangetrieben, in einem Umfeld, in dem jedes Dokument zählt. Wir haben die digitale Signatur ins sichere NATO-Netz gebracht, und Freigaben wurden 60 % schneller. Wir haben eine Software eingeführt, die 25 Ingenieuren 30 % ihrer Zeit gespart hat. Am meisten bedeutet haben mir nicht die Zahlen, sondern zu sehen, wie Kolleginnen und Kollegen diese Zeit für das genutzt haben, was ihnen wirklich wichtig war.</p></div>
+        </li>
+        <li>
+          <span class="when">2023 — 2025</span>
+          <div class="what"><h3>Das Unternehmen von oben sehen</h3><span class="org">IESE Business School · Executive MBA</span><p>Neben meiner Arbeit bei Eurofighter habe ich den Executive MBA am IESE gemacht. Ich wollte Unternehmen so gut verstehen wie einen Motor.</p></div>
+        </li>
+        <li>
+          <span class="when">2025 — 2026</span>
+          <div class="what"><h3>Mit KI etwas von Grund auf aufbauen</h3><span class="org">Laborai · KI-natives Fintech · Madrid</span><p>Ich war Gründungs-COO eines Startups, das Menschen mit KI zu Steuern und Finanzen berät. Wir haben ein Team von 25 Personen aufgebaut und in einem Jahr 120.000 Kunden erreicht. Es war meine erste große KI-Werkstatt: Wir haben interne Werkzeuge gebaut, die dem Team Routinearbeit abgenommen haben, damit es sich auf die Fälle konzentrieren konnte, die einen Menschen brauchten. Dieselbe Idee wie immer: Technik nutzen, um jemandem das Leben leichter zu machen.</p></div>
+        </li>
+      </ol>
+      <p style="color:var(--muted);font-size:.95rem">Lieber die formelle Version mit allen Daten und Zahlen? Die gibt es auf meinem <a href="https://www.linkedin.com/in/luisarevalo-" target="_blank" rel="noopener">LinkedIn</a>.</p>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="wrap">
+      <span class="label">Blog</span>
+      <h2>Was ich mit KI lerne</h2>
+      <ul class="posts">
+        <li><a class="post-link" href="#articulo">
+          <span class="date">21. Okt. 2026</span>
+          <span class="body"><h3>Wie ich mit KI meine Woche in 20 Minuten plane</h3><p>Die Methode, die genauen Prompts und die drei Fehler, die ich am Anfang gemacht habe.</p><span class="soon">Beispiel</span></span>
+        </a></li>
+        <li><div class="post-link">
+          <span class="date">Demnächst</span>
+          <span class="body"><h3>Vom Eurofighter zum KI-nativen Fintech</h3><p>Was sich ähnelt und was nicht, wenn man ein NATO-Programm digitalisiert oder Operations von null aufbaut.</p><span class="soon">Idee</span></span>
+        </div></li>
+        <li><div class="post-link">
+          <span class="date">Demnächst</span>
+          <span class="body"><h3>Skalieren oder stoppen: Entscheiden mit KPIs</h3><p>Wie wir den Test-and-Learn-Zyklus in einem Startup organisiert haben, das jede Woche gewachsen ist.</p><span class="soon">Idee</span></span>
+        </div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <div class="wrap">
+      <span class="label">Kontakt</span>
+      <h2>Lass uns reden</h2>
+      <p>Wenn dir etwas, das ich schreibe, weiterhilft oder du eine Idee besprechen möchtest, schreib mir auf LinkedIn. Ich antworte allen.</p>
+      <div class="actions"><a class="btn primary" href="https://www.linkedin.com/in/luisarevalo-" target="_blank" rel="noopener">Schreib mir auf LinkedIn</a></div>
+    </div>
+  </section>
+</main>
+
+<article id="articulo" hidden>
+  <section>
+    <div class="wrap">
+      <a class="back" href="#blog">← Zurück zum Blog</a>
+      <span class="label">21. Oktober 2026 · 6 Min. Lesezeit</span>
+      <h1 style="font-size:clamp(1.9rem,5vw,2.6rem)">Wie ich mit KI meine Woche in 20 Minuten plane</h1>
+      <div class="meta" aria-label="Steckbrief des Experiments">
+        <div><span class="label">Werkzeug</span><strong>Claude</strong></div>
+        <div><span class="label">Vorher</span><strong>~90 Min. / Woche</strong></div>
+        <div><span class="label">Jetzt</span><strong>~20 Min. / Woche</strong></div>
+        <div><span class="label">Schwierigkeit</span><strong>Niedrig</strong></div>
+      </div>
+
+      <p>Jeden Montag habe ich anderthalb Stunden damit verbracht zu entscheiden, was ich zuerst mache. Ich bin E-Mails, lose Notizen und den Kalender durchgegangen und habe die Woche trotzdem mit dem Gefühl begonnen, etwas vergessen zu haben. Vor drei Monaten habe ich ausprobiert, den mechanischen Teil an die KI abzugeben. Das ist die Methode, die bei mir funktioniert.</p>
+
+      <h2>1. Alles ungeordnet aufschreiben</h2>
+      <p>Der erste Schritt: alles Offene in eine einzige Nachricht kopieren. Aufgaben, Termine, halbfertige Ideen. Es muss nicht ordentlich sein. Die KI sortiert viel besser, als ich um acht Uhr morgens denke.</p>
+
+      <h2>2. Einen Plan mit klaren Kriterien anfordern</h2>
+      <p>Entscheidend ist, ihr zu sagen, wie ich priorisieren will. Diesen Prompt nutze ich fast unverändert jede Woche:</p>
+      <div class="prompt"><span class="label">Prompt</span>Hier sind meine offenen Aufgaben für diese Woche. Sortiere sie in drei Gruppen: (1) dringend und wichtig, (2) wichtig, aber kann warten, (3) kann delegiert oder gestrichen werden. Schlag für Gruppe 1 vor, an welchem Tag ich jede Aufgabe erledige, und berücksichtige diese Termine: [ich füge meinen Kalender ein]. Wenn etwas unklar ist, frag mich, bevor du entscheidest.</div>
+
+      <h2>3. Prüfen und anpassen</h2>
+      <p>Der Plan ist nie beim ersten Mal perfekt, und das ist in Ordnung. Ich nehme mir fünf Minuten, um Dinge zu verschieben und zu erklären, warum. Mit der Zeit habe ich gelernt, dass der letzte Satz des Prompts, der mit dem Nachfragen, das Ergebnis am meisten verbessert.</p>
+
+      <h2>Die drei Fehler, die ich am Anfang gemacht habe</h2>
+      <ol>
+        <li><strong>Zu wenig verlangen.</strong> „Organisiere meine Woche“ liefert allgemeine Antworten. Kriterien ändern alles.</li>
+        <li><strong>Den Plan ungelesen übernehmen.</strong> Die KI weiß nicht, dass ich am Donnerstag einen Arzttermin habe, wenn ich es ihr nicht sage.</li>
+        <li><strong>Sensible Daten teilen.</strong> Heute entferne ich Kundennamen und Zahlen, bevor ich etwas einfüge.</li>
+      </ol>
+
+      <p class="aside">Beispielartikel: Zahlen und Methode sind illustrativ. Ersetze ihn durch deine eigene Erfahrung mit echten Zahlen.</p>
+
+      <p>Wenn du es ausprobierst, erzähl mir auf <a href="https://www.linkedin.com/in/luisarevalo-" target="_blank" rel="noopener">LinkedIn</a>, wie es gelaufen ist.</p>
+      <a class="back" href="#blog">← Zurück zum Blog</a>
+    </div>
+  </section>
+</article>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Luis Arévalo Villa</span>
+    <span>Von Hand gemacht, mit etwas Hilfe von KI</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var home = document.getElementById('home');
+  var art = document.getElementById('articulo');
+  function route() {
+    var showArticle = location.hash === '#articulo';
+    art.hidden = !showArticle;
+    home.hidden = showArticle;
+    if (showArticle) window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', route);
+  document.querySelectorAll('a[href="#articulo"]').forEach(function (a) {
+    a.addEventListener('click', function () { setTimeout(route, 0); });
+  });
+  document.querySelectorAll('a[href^="#"]:not([href="#articulo"])').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (!home.hidden) return;
+      art.hidden = true; home.hidden = false;
+    });
+  });
+  route();
+})();
+</script>
+</body>
+</html>
