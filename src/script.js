@@ -20,15 +20,18 @@
   route();
 })();
 
-// Contador de visitas (GoatCounter). Si no responde, no se muestra nada.
+// Contador de visitas (GoatCounter). Solo se muestra a partir de MIN_VISITAS; si no responde, no se ve nada.
 (function () {
+  var MIN_VISITAS = 500;
   var el = document.getElementById('visitas');
   if (!el || !window.fetch || !/luisarevalo\.es$/.test(location.hostname)) return;
   fetch('https://luisarevalo.goatcounter.com/counter/TOTAL.json')
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (d) {
       if (!d || !d.count) return;
-      el.textContent = d.count + ' ' + el.dataset.label;
+      var n = parseInt(String(d.count).replace(/\D/g, ''), 10);
+      if (!(n >= MIN_VISITAS)) return;
+      el.textContent = n.toLocaleString(document.documentElement.lang || 'es') + ' ' + el.dataset.label;
       el.hidden = false;
     })
     .catch(function () {});
