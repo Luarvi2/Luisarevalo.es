@@ -73,6 +73,7 @@ img {{ max-width: 100%; }}
 {body_for(code)}
 <script>
 {js}</script>
+<script data-goatcounter="https://luisarevalo.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
 """
