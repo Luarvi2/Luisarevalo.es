@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Luis Arévalo Villa</title>
+  <link>https://luisarevalo.es/en/</link>
+  <description>Aerospace engineer in Madrid. I write about what I learn using AI to work better.</description>
+  <language>en</language>
+  <item>
+    <title>Being busy is no longer a badge of honour</title>
+    <link>https://luisarevalo.es/en/blog/ocupados/</link>
+    <guid>https://luisarevalo.es/en/blog/ocupados/</guid>
+    <pubDate>Thu, 22 Oct 2026 08:00:00 +0000</pubDate>
+    <description>Armand Ruiz argues that busy people will be the biggest losers of the AI era. I agree, and this is what I think will happen in the coming months.</description>
+  </item>
+</channel>
+</rss>

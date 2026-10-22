@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Estar ocupado ya no es un mérito · Luis Arévalo Villa</title>
+<meta name="description" content="Armand Ruiz dice que la gente ocupada será la gran perdedora de la era de la IA. Estoy de acuerdo, y esto es lo que creo que pasará en los próximos meses.">
+<link rel="canonical" href="https://luisarevalo.es/blog/ocupados/">
+<link rel="alternate" hreflang="es" href="https://luisarevalo.es/blog/ocupados/">
+<link rel="alternate" hreflang="en" href="https://luisarevalo.es/en/blog/ocupados/">
+<link rel="alternate" hreflang="de" href="https://luisarevalo.es/de/blog/ocupados/">
+<link rel="alternate" hreflang="x-default" href="https://luisarevalo.es/blog/ocupados/">
+<link rel="alternate" type="application/rss+xml" title="Luis Arévalo Villa" href="https://luisarevalo.es/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Estar ocupado ya no es un mérito · Luis Arévalo Villa">
+<meta property="og:description" content="Armand Ruiz dice que la gente ocupada será la gran perdedora de la era de la IA. Estoy de acuerdo, y esto es lo que creo que pasará en los próximos meses.">
+<meta property="og:url" content="https://luisarevalo.es/blog/ocupados/">
+<meta property="og:image" content="https://luisarevalo.es/foto-luis.jpg">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-10-22">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: una columna estrecha; azul marino de base y naranja de aviación como único acento */
+:root {
+  --bg: #f2f5f9;
+  --surface: #ffffff;
+  --ink: #0f1f33;
+  --muted: #56657a;
+  --line: #d8e0ea;
+  --soft: #e6ecf3;
+  --accent: #dd5a12;
+  --on-ink: #ffffff;
+  --sans: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1522; --surface: #111e2f; --ink: #e8eef5; --muted: #97a6b8; --line: #22344a; --soft: #16263a; --accent: #ff8340; --on-ink: #0b1522;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1522; --surface: #111e2f; --ink: #e8eef5; --muted: #97a6b8; --line: #22344a; --soft: #16263a; --accent: #ff8340; --on-ink: #0b1522;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: text-decoration-color .15s; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 40rem; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Cabecera */
+header.top .wrap { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: 2rem 0; }
+.brand { font-weight: 600; text-decoration: none; }
+nav { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: .9rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+.langs { display: flex; gap: .6rem; }
+.langs a { font-size: .8rem; letter-spacing: .04em; }
+.langs a[aria-current="true"] { color: var(--accent); font-weight: 600; }
+
+h1, h2, h3 { color: var(--ink); font-weight: 600; line-height: 1.2; text-wrap: balance; margin: 0; letter-spacing: -.015em; }
+h1 { font-size: clamp(2rem, 6vw, 2.75rem); letter-spacing: -.03em; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.0625rem; }
+p { margin: 0; }
+
+section { padding-block: 3rem; }
+section + section { border-top: 1px solid var(--line); }
+section .wrap { display: grid; gap: 1.1rem; }
+
+/* Las etiquetas de sección no se muestran: el título basta */
+section > .wrap > .label { display: none; }
+.label { font-size: .85rem; color: var(--muted); }
+
+/* Portada */
+.hero { padding-block: 4rem 3.5rem; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 10rem; align-items: center; gap: 1.5rem 2rem; }
+.hero .intro { display: grid; gap: 1rem; min-width: 0; }
+.hero .intro > .label { display: block; order: 2; font-size: .95rem; color: var(--accent); font-weight: 500; }
+.hero h1 { order: 1; }
+.hero .lede { order: 3; font-size: 1.125rem; color: var(--muted); }
+.hero .lede em { font-style: normal; color: var(--ink); }
+.hero .actions { order: 4; }
+.hero .photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; }
+@media (max-width: 640px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero .photo { order: -1; width: 9rem; aspect-ratio: 1; border-radius: 50%; object-position: 50% 20%; }
+}
+
+.actions { display: flex; gap: 1.4rem; flex-wrap: wrap; align-items: center; margin-top: .3rem; }
+.btn { display: inline-flex; align-items: center; gap: .45rem; font-size: .95rem; font-weight: 500; }
+.btn.primary { background: var(--ink); color: var(--bg); padding: .6rem 1rem; border-radius: 6px; text-decoration: none; }
+.btn.primary:hover { background: var(--accent); color: var(--on-ink); }
+.btn svg { width: 15px; height: 15px; fill: currentColor; }
+.btn.primary::after, .btn.ghost::after { content: "↗"; font-size: .85em; color: var(--accent); }
+.btn.primary:hover::after { color: inherit; }
+.btn.ghost::after { content: "↓"; }
+
+/* Temas: una línea de texto, sin pastillas */
+.tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .2rem .9rem; color: var(--muted); font-size: .95rem; }
+
+/* Camino */
+.timeline { list-style: none; padding: 0 0 0 1.2rem; margin: .4rem 0 0; display: grid; gap: 2rem; border-left: 2px solid var(--line); }
+.timeline li { position: relative; }
+.timeline li::before { content: ""; position: absolute; left: calc(-1.2rem - 6px); top: .45rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+.timeline li { display: grid; gap: .35rem; }
+.timeline .when { font-size: .85rem; color: var(--accent); font-weight: 500; font-variant-numeric: tabular-nums; }
+.timeline .what { min-width: 0; display: grid; gap: .3rem; }
+.timeline .org { color: var(--muted); font-size: .95rem; }
+.timeline p { margin-top: .2rem; }
+
+/* Blog */
+.posts { list-style: none; padding: 0; margin: 0; display: grid; }
+.post-link { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding-block: .9rem; text-decoration: none; color: inherit; }
+a.post-link:hover h3 { color: var(--accent); }
+.post-link .date { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.post-link .body { display: grid; gap: .2rem; min-width: 0; }
+.post-link p { color: var(--muted); font-size: .95rem; }
+.post-link h3 { font-weight: 500; }
+div.post-link h3 { color: var(--muted); }
+.soon { font-size: .8rem; color: var(--accent); }
+
+/* Artículo */
+article section { padding-block: 3rem 4rem; }
+article .wrap { gap: 1.3rem; }
+.post-title { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+article blockquote { margin: 0; padding-left: 1rem; border-left: 3px solid var(--accent); font-size: 1.15rem; color: var(--ink); }
+article .source { font-size: .95rem; color: var(--muted); }
+article .wrap > .label { display: block; }
+.back { font-size: .9rem; color: var(--muted); text-decoration: none; }
+.back:hover { color: var(--ink); }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; padding-block: .9rem; border-block: 1px solid var(--line); font-size: .9rem; }
+.meta div { display: flex; gap: .4rem; }
+.meta .label { font-size: .9rem; }
+.meta strong { font-weight: 500; }
+article h2 { font-size: 1.2rem; margin-top: 1rem; }
+.prompt { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1rem 1.1rem; font-size: .95rem; line-height: 1.6; white-space: pre-wrap; overflow-x: auto; }
+.prompt .label { display: block; margin-bottom: .3rem; font-size: .8rem; }
+article ol, article ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .4rem; }
+.aside { color: var(--muted); font-size: .95rem; }
+
+/* Pie */
+.visits { font-variant-numeric: tabular-nums; }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding-block: 1.6rem 3rem; font-size: .85rem; color: var(--muted); }
+
+@media (max-width: 520px) {
+  .post-link { grid-template-columns: 1fr; gap: .2rem; }
+  nav { gap: .9rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../#inicio">Luis Arévalo Villa</a>
+    <nav aria-label="Secciones">
+      <a href="../../#sobre-mi">Sobre mí</a>
+      <a href="../../#experiencia">Experiencia</a>
+      <a href="../../#blog">Blog</a>
+      <a href="../../#contacto">Contacto</a>
+      <span class="langs" aria-label="Idioma / Language / Sprache"><a href="../../blog/ocupados/" hreflang="es" lang="es" aria-current="true">ES</a><a href="../../en/blog/ocupados/" hreflang="en" lang="en">EN</a><a href="../../de/blog/ocupados/" hreflang="de" lang="de">DE</a></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="post">
+  <section>
+    <div class="wrap">
+      <a class="back" href="../../#blog">← Volver al blog</a>
+      <span class="label">22 de octubre de 2026 · 6 min de lectura</span>
+      <h1 class="post-title">Estar ocupado ya no es un mérito</h1>
+      <p>En marzo, Armand Ruiz, que construye sistemas de IA en Meta y antes dirigió la plataforma de IA de IBM, publicó <a href="https://www.linkedin.com/pulse/busy-people-biggest-losers-armand-ruiz-ilnuc/" target="_blank" rel="noopener">un artículo en LinkedIn</a> con una idea que la primera vez me pareció exagerada: la gente ocupada va a ser la gran perdedora de la era de la IA. La segunda vez me pareció exacta.</p>
+
+      <h2>La idea, en pocas palabras</h2>
+      <p>Armand habla a menudo con directivos de grandes empresas que le aseguran que usan la IA "todo el tiempo". Cuando rasca un poco, usarla significa pedirle que reescriba un correo o que resuma un PDF. No automatizan su trabajo, no la usan para pensar y, sobre todo, no dan ejemplo a sus equipos. Y cuando les pregunta por qué no van más allá, la respuesta es siempre la misma: no tengo tiempo.</p>
+      <blockquote>«Si tu agenda es un bloque de color de 8:00 a 18:00, no eres un líder visionario. Eres un cuello de botella.»</blockquote>
+      <p>Su argumento tiene tres partes que me parecen clave:</p>
+      <ul>
+        <li><strong>Las reglas han cambiado.</strong> Durante décadas, ser grande era una ventaja. Ahora la IA abarata la inteligencia casi a cero, y a un equipo de tres personas le cuesta menos construir un producto entero que a una gran empresa tomar una sola decisión.</li>
+        <li><strong>Estar ocupado es un escudo.</strong> Aprender IA obliga a volver a ser principiante, y eso incomoda a quien lleva veinte años siendo experto. Llenar la agenda de reuniones es una forma de esconderse.</li>
+        <li><strong>Leer sobre IA no es usar la IA.</strong> Lo que marca la diferencia es la práctica: probar una y otra vez hasta saber cómo hablar con el modelo y dónde falla.</li>
+      </ul>
+      <p>Su propuesta es directa: cancelar al menos un 30 % de las reuniones internas, dar a los equipos diez horas a la semana para experimentar, construir uno mismo prototipos aunque sean feos y pedir mejoras de 10x, no del 10 %.</p>
+
+      <h2>Por qué me toca de cerca</h2>
+      <p>He vivido los dos mundos que describe. En los programas del Tornado y del Eurofighter trabajé en una de las organizaciones más reguladas que existen, donde cada decisión pasa por muchas manos. Para llevar la firma digital a la red segura de la OTAN hizo falta convencer al consejo de dirección. Mereció la pena, porque las aprobaciones pasaron a ser un 60 % más rápidas, pero aprendí lo que cuesta mover algo grande.</p>
+      <p>Después, en Laborai, montamos desde cero una empresa nativa de IA. Allí el ritmo era otro: creábamos herramientas internas de IA para quitarle trabajo repetitivo al equipo y que pudiera dedicarse a los casos que necesitaban a una persona. La diferencia entre los dos mundos no estaba en el talento de la gente. Estaba en el tiempo que cada organización se permitía para probar cosas nuevas.</p>
+      <p>Por eso la frase del artículo que más me ha hecho pensar no es la más dura, sino esta otra: si tu equipo está demasiado ocupado con su trabajo de siempre para experimentar con la IA, le estás fallando.</p>
+
+      <h2>Lo que creo que va a pasar en los próximos meses</h2>
+      <p>A partir de aquí la opinión es mía, no de Armand. Estas son las tendencias que veo y que creo que se notarán a lo largo de 2027:</p>
+      <ol>
+        <li><strong>Las horas recuperadas se convertirán en un indicador.</strong> Igual que hoy se miden ventas o costes, las empresas empezarán a medir cuántas horas recupera cada equipo gracias a la IA y qué hace con ellas.</li>
+        <li><strong>Los agentes pasarán de la demo al día a día.</strong> Informes semanales, primeros borradores, clasificar las consultas de los clientes: muchas tareas que hoy hace una persona a mano las hará un agente, y la persona revisará.</li>
+        <li><strong>Veremos más empresas diminutas compitiendo con gigantes.</strong> Equipos de tres a diez personas lanzarán productos que antes necesitaban un departamento entero.</li>
+        <li><strong>En las entrevistas se preguntará qué has automatizado.</strong> Saber trabajar con IA dejará de ser un extra en el CV y se dará por hecho, sobre todo en puestos de dirección.</li>
+        <li><strong>En los sectores regulados, el freno no será la tecnología sino las reglas internas.</strong> Aviación, banca o sanidad irán más despacio, y ganarán las organizaciones que creen espacios seguros para probar sin poner en riesgo lo crítico.</li>
+        <li><strong>La brecha entre quien prueba y quien asiente se hará visible.</strong> No entre empresas grandes y pequeñas, sino entre personas: las que dedican horas reales a trabajar con la IA y las que solo hablan de ella en las reuniones.</li>
+      </ol>
+
+      <h2>Lo que me llevo</h2>
+      <p>De pequeño aprendí cómo funcionaban las cosas desmontándolas, no leyendo sobre ellas. Con la IA pasa lo mismo: solo se entiende usándola, equivocándose y volviendo a probar. Y para eso hace falta justo lo que la gente ocupada no tiene: tiempo.</p>
+      <p>Te dejo la pregunta que Armand propone hacer en el próximo uno a uno con tu equipo, y que yo también me hago a mí mismo: ¿qué tarea que hoy te lleva cinco horas a la semana vas a reducir a cinco minutos este mes?</p>
+      <p class="source">Basado en el <a href="https://www.linkedin.com/pulse/busy-people-biggest-losers-armand-ruiz-ilnuc/" target="_blank" rel="noopener">artículo de Armand Ruiz en LinkedIn</a> del 3 de marzo de 2026. La cita está traducida por mí.</p>
+      <a class="back" href="../../#blog">← Volver al blog</a>
+    </div>
+  </section>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Luis Arévalo Villa</span>
+    <span>Hecho a mano, con ayuda de la IA</span>
+    <span class="visits" id="visitas" data-label="visitas" hidden></span>
+  </div>
+</footer>
+<script>
+// Contador de visitas (GoatCounter). Solo se muestra a partir de MIN_VISITAS; si no responde, no se ve nada.
+(function () {
+  var MIN_VISITAS = 500;
+  var el = document.getElementById('visitas');
+  if (!el || !window.fetch || !/luisarevalo\.es$/.test(location.hostname)) return;
+  fetch('https://luisarevalo.goatcounter.com/counter/TOTAL.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.count) return;
+      var n = parseInt(String(d.count).replace(/\D/g, ''), 10);
+      if (!(n >= MIN_VISITAS)) return;
+      el.textContent = n.toLocaleString(document.documentElement.lang || 'es') + ' ' + el.dataset.label;
+      el.hidden = false;
+    })
+    .catch(function () {});
+})();
+</script>
+<script data-goatcounter="https://luisarevalo.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

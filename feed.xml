@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Luis Arévalo Villa</title>
+  <link>https://luisarevalo.es/</link>
+  <description>Ingeniero aeroespacial en Madrid. Escribo sobre lo que aprendo usando la IA para trabajar mejor.</description>
+  <language>es</language>
+  <item>
+    <title>Estar ocupado ya no es un mérito</title>
+    <link>https://luisarevalo.es/blog/ocupados/</link>
+    <guid>https://luisarevalo.es/blog/ocupados/</guid>
+    <pubDate>Thu, 22 Oct 2026 08:00:00 +0000</pubDate>
+    <description>Armand Ruiz dice que la gente ocupada será la gran perdedora de la era de la IA. Estoy de acuerdo, y esto es lo que creo que pasará en los próximos meses.</description>
+  </item>
+</channel>
+</rss>

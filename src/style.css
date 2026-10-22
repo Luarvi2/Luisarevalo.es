@@ -102,6 +102,9 @@ div.post-link h3 { color: var(--muted); }
 /* Artículo */
 article section { padding-block: 3rem 4rem; }
 article .wrap { gap: 1.3rem; }
+.post-title { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+article blockquote { margin: 0; padding-left: 1rem; border-left: 3px solid var(--accent); font-size: 1.15rem; color: var(--ink); }
+article .source { font-size: .95rem; color: var(--muted); }
 article .wrap > .label { display: block; }
 .back { font-size: .9rem; color: var(--muted); text-decoration: none; }
 .back:hover { color: var(--ink); }

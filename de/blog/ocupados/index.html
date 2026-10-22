@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beschäftigt sein ist kein Verdienst mehr · Luis Arévalo Villa</title>
+<meta name="description" content="Armand Ruiz meint, dass beschäftigte Menschen die großen Verlierer der KI-Ära sein werden. Ich stimme zu, und das erwarte ich für die nächsten Monate.">
+<link rel="canonical" href="https://luisarevalo.es/de/blog/ocupados/">
+<link rel="alternate" hreflang="es" href="https://luisarevalo.es/blog/ocupados/">
+<link rel="alternate" hreflang="en" href="https://luisarevalo.es/en/blog/ocupados/">
+<link rel="alternate" hreflang="de" href="https://luisarevalo.es/de/blog/ocupados/">
+<link rel="alternate" hreflang="x-default" href="https://luisarevalo.es/blog/ocupados/">
+<link rel="alternate" type="application/rss+xml" title="Luis Arévalo Villa" href="https://luisarevalo.es/de/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beschäftigt sein ist kein Verdienst mehr · Luis Arévalo Villa">
+<meta property="og:description" content="Armand Ruiz meint, dass beschäftigte Menschen die großen Verlierer der KI-Ära sein werden. Ich stimme zu, und das erwarte ich für die nächsten Monate.">
+<meta property="og:url" content="https://luisarevalo.es/de/blog/ocupados/">
+<meta property="og:image" content="https://luisarevalo.es/foto-luis.jpg">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-10-22">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: una columna estrecha; azul marino de base y naranja de aviación como único acento */
+:root {
+  --bg: #f2f5f9;
+  --surface: #ffffff;
+  --ink: #0f1f33;
+  --muted: #56657a;
+  --line: #d8e0ea;
+  --soft: #e6ecf3;
+  --accent: #dd5a12;
+  --on-ink: #ffffff;
+  --sans: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1522; --surface: #111e2f; --ink: #e8eef5; --muted: #97a6b8; --line: #22344a; --soft: #16263a; --accent: #ff8340; --on-ink: #0b1522;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1522; --surface: #111e2f; --ink: #e8eef5; --muted: #97a6b8; --line: #22344a; --soft: #16263a; --accent: #ff8340; --on-ink: #0b1522;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: text-decoration-color .15s; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 40rem; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Cabecera */
+header.top .wrap { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: 2rem 0; }
+.brand { font-weight: 600; text-decoration: none; }
+nav { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: .9rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+.langs { display: flex; gap: .6rem; }
+.langs a { font-size: .8rem; letter-spacing: .04em; }
+.langs a[aria-current="true"] { color: var(--accent); font-weight: 600; }
+
+h1, h2, h3 { color: var(--ink); font-weight: 600; line-height: 1.2; text-wrap: balance; margin: 0; letter-spacing: -.015em; }
+h1 { font-size: clamp(2rem, 6vw, 2.75rem); letter-spacing: -.03em; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.0625rem; }
+p { margin: 0; }
+
+section { padding-block: 3rem; }
+section + section { border-top: 1px solid var(--line); }
+section .wrap { display: grid; gap: 1.1rem; }
+
+/* Las etiquetas de sección no se muestran: el título basta */
+section > .wrap > .label { display: none; }
+.label { font-size: .85rem; color: var(--muted); }
+
+/* Portada */
+.hero { padding-block: 4rem 3.5rem; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 10rem; align-items: center; gap: 1.5rem 2rem; }
+.hero .intro { display: grid; gap: 1rem; min-width: 0; }
+.hero .intro > .label { display: block; order: 2; font-size: .95rem; color: var(--accent); font-weight: 500; }
+.hero h1 { order: 1; }
+.hero .lede { order: 3; font-size: 1.125rem; color: var(--muted); }
+.hero .lede em { font-style: normal; color: var(--ink); }
+.hero .actions { order: 4; }
+.hero .photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; }
+@media (max-width: 640px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero .photo { order: -1; width: 9rem; aspect-ratio: 1; border-radius: 50%; object-position: 50% 20%; }
+}
+
+.actions { display: flex; gap: 1.4rem; flex-wrap: wrap; align-items: center; margin-top: .3rem; }
+.btn { display: inline-flex; align-items: center; gap: .45rem; font-size: .95rem; font-weight: 500; }
+.btn.primary { background: var(--ink); color: var(--bg); padding: .6rem 1rem; border-radius: 6px; text-decoration: none; }
+.btn.primary:hover { background: var(--accent); color: var(--on-ink); }
+.btn svg { width: 15px; height: 15px; fill: currentColor; }
+.btn.primary::after, .btn.ghost::after { content: "↗"; font-size: .85em; color: var(--accent); }
+.btn.primary:hover::after { color: inherit; }
+.btn.ghost::after { content: "↓"; }
+
+/* Temas: una línea de texto, sin pastillas */
+.tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .2rem .9rem; color: var(--muted); font-size: .95rem; }
+
+/* Camino */
+.timeline { list-style: none; padding: 0 0 0 1.2rem; margin: .4rem 0 0; display: grid; gap: 2rem; border-left: 2px solid var(--line); }
+.timeline li { position: relative; }
+.timeline li::before { content: ""; position: absolute; left: calc(-1.2rem - 6px); top: .45rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+.timeline li { display: grid; gap: .35rem; }
+.timeline .when { font-size: .85rem; color: var(--accent); font-weight: 500; font-variant-numeric: tabular-nums; }
+.timeline .what { min-width: 0; display: grid; gap: .3rem; }
+.timeline .org { color: var(--muted); font-size: .95rem; }
+.timeline p { margin-top: .2rem; }
+
+/* Blog */
+.posts { list-style: none; padding: 0; margin: 0; display: grid; }
+.post-link { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding-block: .9rem; text-decoration: none; color: inherit; }
+a.post-link:hover h3 { color: var(--accent); }
+.post-link .date { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.post-link .body { display: grid; gap: .2rem; min-width: 0; }
+.post-link p { color: var(--muted); font-size: .95rem; }
+.post-link h3 { font-weight: 500; }
+div.post-link h3 { color: var(--muted); }
+.soon { font-size: .8rem; color: var(--accent); }
+
+/* Artículo */
+article section { padding-block: 3rem 4rem; }
+article .wrap { gap: 1.3rem; }
+.post-title { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+article blockquote { margin: 0; padding-left: 1rem; border-left: 3px solid var(--accent); font-size: 1.15rem; color: var(--ink); }
+article .source { font-size: .95rem; color: var(--muted); }
+article .wrap > .label { display: block; }
+.back { font-size: .9rem; color: var(--muted); text-decoration: none; }
+.back:hover { color: var(--ink); }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; padding-block: .9rem; border-block: 1px solid var(--line); font-size: .9rem; }
+.meta div { display: flex; gap: .4rem; }
+.meta .label { font-size: .9rem; }
+.meta strong { font-weight: 500; }
+article h2 { font-size: 1.2rem; margin-top: 1rem; }
+.prompt { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1rem 1.1rem; font-size: .95rem; line-height: 1.6; white-space: pre-wrap; overflow-x: auto; }
+.prompt .label { display: block; margin-bottom: .3rem; font-size: .8rem; }
+article ol, article ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .4rem; }
+.aside { color: var(--muted); font-size: .95rem; }
+
+/* Pie */
+.visits { font-variant-numeric: tabular-nums; }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding-block: 1.6rem 3rem; font-size: .85rem; color: var(--muted); }
+
+@media (max-width: 520px) {
+  .post-link { grid-template-columns: 1fr; gap: .2rem; }
+  nav { gap: .9rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../#inicio">Luis Arévalo Villa</a>
+    <nav aria-label="Bereiche">
+      <a href="../../#sobre-mi">Über mich</a>
+      <a href="../../#experiencia">Werdegang</a>
+      <a href="../../#blog">Blog</a>
+      <a href="../../#contacto">Kontakt</a>
+      <span class="langs" aria-label="Idioma / Language / Sprache"><a href="../../../blog/ocupados/" hreflang="es" lang="es">ES</a><a href="../../../en/blog/ocupados/" hreflang="en" lang="en">EN</a><a href="../../../de/blog/ocupados/" hreflang="de" lang="de" aria-current="true">DE</a></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="post">
+  <section>
+    <div class="wrap">
+      <a class="back" href="../../#blog">← Zurück zum Blog</a>
+      <span class="label">22. Oktober 2026 · 6 Min. Lesezeit</span>
+      <h1 class="post-title">Beschäftigt sein ist kein Verdienst mehr</h1>
+      <p>Im März hat Armand Ruiz, der bei Meta KI-Systeme baut und zuvor die KI-Plattform von IBM geleitet hat, <a href="https://www.linkedin.com/pulse/busy-people-biggest-losers-armand-ruiz-ilnuc/" target="_blank" rel="noopener">einen Artikel auf LinkedIn</a> veröffentlicht. Seine These kam mir beim ersten Lesen übertrieben vor: Beschäftigte Menschen werden die großen Verlierer der KI-Ära sein. Beim zweiten Lesen fand ich sie genau richtig.</p>
+
+      <h2>Die Idee in Kürze</h2>
+      <p>Armand spricht oft mit Führungskräften großer Unternehmen, die ihm versichern, sie nutzten KI „ständig“. Fragt man etwas nach, heißt das: Sie lassen eine E-Mail umformulieren oder ein PDF zusammenfassen. Sie automatisieren ihre Arbeit nicht, sie nutzen KI nicht zum Denken, und vor allem gehen sie ihren Teams nicht mit gutem Beispiel voran. Und wenn er fragt, warum sie nicht weitergehen, ist die Antwort immer dieselbe: Ich habe keine Zeit.</p>
+      <blockquote>„Wenn dein Kalender von 8 bis 18 Uhr ein einziger Farbblock ist, bist du keine visionäre Führungskraft. Du bist ein Engpass.“</blockquote>
+      <p>Sein Argument hat drei Teile, die ich für entscheidend halte:</p>
+      <ul>
+        <li><strong>Die Regeln haben sich geändert.</strong> Jahrzehntelang war Größe ein Vorteil. Jetzt senkt KI die Kosten von Intelligenz fast auf null, und ein Team aus drei Personen baut leichter ein ganzes Produkt, als ein Konzern eine einzige Entscheidung trifft.</li>
+        <li><strong>Beschäftigt sein ist ein Schutzschild.</strong> Wer KI lernen will, muss wieder Anfänger sein, und das ist unbequem für jemanden, der seit zwanzig Jahren Experte ist. Den Kalender mit Meetings zu füllen, ist eine Art, sich zu verstecken.</li>
+        <li><strong>Über KI lesen ist nicht dasselbe wie KI nutzen.</strong> Den Unterschied macht die Praxis: immer wieder ausprobieren, bis man weiß, wie man mit dem Modell spricht und wo es scheitert.</li>
+      </ul>
+      <p>Sein Vorschlag ist deutlich: mindestens 30 % der internen Meetings absagen, den Teams zehn Stunden pro Woche zum Experimentieren geben, selbst Prototypen bauen, auch wenn sie hässlich sind, und Verbesserungen um das Zehnfache verlangen, nicht um 10 %.</p>
+
+      <h2>Warum mich das persönlich betrifft</h2>
+      <p>Ich habe beide Welten erlebt, die er beschreibt. In den Programmen Tornado und Eurofighter habe ich in einer der am stärksten regulierten Organisationen überhaupt gearbeitet, in der jede Entscheidung durch viele Hände geht. Um die digitale Signatur ins sichere NATO-Netz zu bringen, mussten wir die Geschäftsführung überzeugen. Es hat sich gelohnt, denn Freigaben wurden 60 % schneller, aber ich habe gelernt, was es kostet, etwas Großes zu bewegen.</p>
+      <p>Danach haben wir bei Laborai ein KI-natives Unternehmen von Grund auf aufgebaut. Dort war das Tempo ein anderes: Wir haben interne KI-Werkzeuge gebaut, die dem Team Routinearbeit abgenommen haben, damit es sich auf die Fälle konzentrieren konnte, die einen Menschen brauchten. Der Unterschied zwischen beiden Welten lag nicht im Talent der Menschen. Er lag in der Zeit, die sich jede Organisation zum Ausprobieren gönnte.</p>
+      <p>Deshalb hat mich nicht der härteste Satz des Artikels am meisten beschäftigt, sondern dieser: Wenn dein Team zu beschäftigt mit seiner normalen Arbeit ist, um mit KI zu experimentieren, lässt du es im Stich.</p>
+
+      <h2>Was meiner Meinung nach in den nächsten Monaten passiert</h2>
+      <p>Ab hier ist es meine Meinung, nicht die von Armand. Das sind die Trends, die ich sehe und die sich meiner Ansicht nach im Laufe von 2027 zeigen werden:</p>
+      <ol>
+        <li><strong>Gewonnene Stunden werden zur Kennzahl.</strong> So wie Unternehmen heute Umsatz oder Kosten messen, werden sie messen, wie viele Stunden jedes Team dank KI gewinnt und was es damit macht.</li>
+        <li><strong>Agenten wandern von der Demo in den Arbeitsalltag.</strong> Wochenberichte, erste Entwürfe, das Sortieren von Kundenanfragen: Viele Aufgaben, die heute ein Mensch von Hand erledigt, übernimmt ein Agent, und der Mensch prüft.</li>
+        <li><strong>Mehr winzige Unternehmen treten gegen Riesen an.</strong> Teams aus drei bis zehn Personen bringen Produkte heraus, für die früher eine ganze Abteilung nötig war.</li>
+        <li><strong>Im Vorstellungsgespräch wird gefragt, was du automatisiert hast.</strong> Mit KI arbeiten zu können, ist dann kein Extra im Lebenslauf mehr, sondern selbstverständlich, vor allem in Führungspositionen.</li>
+        <li><strong>In regulierten Branchen bremst nicht die Technik, sondern die internen Regeln.</strong> Luftfahrt, Banken und Gesundheitswesen werden langsamer sein, und gewinnen werden die Organisationen, die sichere Räume zum Ausprobieren schaffen, ohne Kritisches zu gefährden.</li>
+        <li><strong>Die Lücke zwischen denen, die ausprobieren, und denen, die nicken, wird sichtbar.</strong> Nicht zwischen großen und kleinen Unternehmen, sondern zwischen Menschen: denen, die echte Stunden mit KI arbeiten, und denen, die nur in Meetings darüber reden.</li>
+      </ol>
+
+      <h2>Was ich mitnehme</h2>
+      <p>Als Kind habe ich verstanden, wie Dinge funktionieren, indem ich sie auseinandergeschraubt habe, nicht indem ich darüber gelesen habe. Mit KI ist es genauso: Man versteht sie nur, wenn man sie benutzt, Fehler macht und es wieder versucht. Und dafür braucht man genau das, was beschäftigte Menschen nicht haben: Zeit.</p>
+      <p>Zum Schluss die Frage, die Armand für das nächste Einzelgespräch mit dem Team vorschlägt und die ich mir auch selbst stelle: Welche Aufgabe, für die du heute fünf Stunden pro Woche brauchst, wirst du diesen Monat auf fünf Minuten verkürzen?</p>
+      <p class="source">Basierend auf dem <a href="https://www.linkedin.com/pulse/busy-people-biggest-losers-armand-ruiz-ilnuc/" target="_blank" rel="noopener">Artikel von Armand Ruiz auf LinkedIn</a> vom 3. März 2026. Das Zitat habe ich übersetzt.</p>
+      <a class="back" href="../../#blog">← Zurück zum Blog</a>
+    </div>
+  </section>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Luis Arévalo Villa</span>
+    <span>Von Hand gemacht, mit etwas Hilfe von KI</span>
+    <span class="visits" id="visitas" data-label="Besuche" hidden></span>
+  </div>
+</footer>
+<script>
+// Contador de visitas (GoatCounter). Solo se muestra a partir de MIN_VISITAS; si no responde, no se ve nada.
+(function () {
+  var MIN_VISITAS = 500;
+  var el = document.getElementById('visitas');
+  if (!el || !window.fetch || !/luisarevalo\.es$/.test(location.hostname)) return;
+  fetch('https://luisarevalo.goatcounter.com/counter/TOTAL.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.count) return;
+      var n = parseInt(String(d.count).replace(/\D/g, ''), 10);
+      if (!(n >= MIN_VISITAS)) return;
+      el.textContent = n.toLocaleString(document.documentElement.lang || 'es') + ' ' + el.dataset.label;
+      el.hidden = false;
+    })
+    .catch(function () {});
+})();
+</script>
+<script data-goatcounter="https://luisarevalo.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

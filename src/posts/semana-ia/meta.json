@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-21",
+  "draft": true,
+  "es": {
+    "title": "Cómo uso la IA para preparar mi semana en 20 minutos",
+    "desc": "El método, los prompts exactos y los tres errores que cometí al principio.",
+    "read": "6 min de lectura"
+  },
+  "en": {
+    "title": "How I use AI to plan my week in 20 minutes",
+    "desc": "The method, the exact prompts and the three mistakes I made at the start.",
+    "read": "6 min read"
+  },
+  "de": {
+    "title": "Wie ich mit KI meine Woche in 20 Minuten plane",
+    "desc": "Die Methode, die genauen Prompts und die drei Fehler, die ich am Anfang gemacht habe.",
+    "read": "6 Min. Lesezeit"
+  }
+}
