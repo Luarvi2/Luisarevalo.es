@@ -18,7 +18,7 @@ SITE = "https://luisarevalo.es"
 FONTS = "https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap"
 LANGS = {
     "es": {"dir": "", "label": "ES",
-           "title": "Luis Arévalo Villa · IA, operaciones y aviones",
+           "title": "Luis Arévalo · IA, operaciones y aviones",
            "desc": "Ingeniero aeroespacial en Madrid. Escribo sobre lo que aprendo usando la IA para trabajar mejor.",
            "back": "← Volver al blog", "new": "Nuevo", "latest": "Nuevo en el blog",
            "months": ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
@@ -26,7 +26,7 @@ LANGS = {
                            "septiembre", "octubre", "noviembre", "diciembre"],
            "short": "{d} {m} {y}", "long": "{d} de {m} de {y}"},
     "en": {"dir": "en/", "label": "EN",
-           "title": "Luis Arévalo Villa · AI, operations and planes",
+           "title": "Luis Arévalo · AI, operations and planes",
            "desc": "Aerospace engineer in Madrid. I write about what I learn using AI to work better.",
            "back": "← Back to the blog", "new": "New", "latest": "New on the blog",
            "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -34,7 +34,7 @@ LANGS = {
                            "September", "October", "November", "December"],
            "short": "{d} {m} {y}", "long": "{d} {m} {y}"},
     "de": {"dir": "de/", "label": "DE",
-           "title": "Luis Arévalo Villa · KI, Operations und Flugzeuge",
+           "title": "Luis Arévalo · KI, Operations und Flugzeuge",
            "desc": "Luft- und Raumfahrtingenieur in Madrid. Ich schreibe darüber, was ich lerne, wenn ich KI nutze, um besser zu arbeiten.",
            "back": "← Zurück zum Blog", "new": "Neu", "latest": "Neu im Blog",
            "months": ["Jan.", "Feb.", "März", "Apr.", "Mai", "Juni", "Juli", "Aug.", "Sept.", "Okt.", "Nov.", "Dez."],
@@ -117,7 +117,7 @@ def head(code, title, desc, path, og_type="website", extra=""):
 <link rel="canonical" href="{url}">
 {alt}
 <link rel="alternate" hreflang="x-default" href="{SITE}/{path}">
-<link rel="alternate" type="application/rss+xml" title="Luis Arévalo Villa" href="{feed}">
+<link rel="alternate" type="application/rss+xml" title="Luis Arévalo" href="{feed}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
@@ -207,7 +207,7 @@ def feed(code, posts):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-  <title>Luis Arévalo Villa</title>
+  <title>Luis Arévalo</title>
   <link>{base}</link>
   <description>{html.escape(L["desc"])}</description>
   <language>{code}</language>
@@ -227,7 +227,7 @@ def build(out="", css="", js="", posts=()):
             path = f'blog/{p["slug"]}/'
             extra = f'\n<meta property="article:published_time" content="{p["date"]}">'
             pages[f'{L["dir"]}{path}index.html'] = document(
-                code, head(code, f'{t["title"]} · Luis Arévalo Villa', t["desc"], path, "article", extra),
+                code, head(code, f'{t["title"]} · Luis Arévalo', t["desc"], path, "article", extra),
                 post_body(code, p), css, js)
     for path, content in pages.items():
         write(os.path.join(out, path), content)
@@ -259,7 +259,7 @@ if __name__ == "__main__":
                     # La página principal se publica sin esqueleto: Claude lo añade.
                     body = s[s.index("<body>") + 6:s.index("</body>")]
                     style = s[s.index("<style>"):s.index("</style>") + 8]
-                    s = (f'<title>Luis Arévalo Villa</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
+                    s = (f'<title>Luis Arévalo</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
                          f'<link rel="stylesheet" href="{FONTS}">\n{style}\n{body}')
                 write(p, s)
     print("ok:", len(posts), "artículos")
