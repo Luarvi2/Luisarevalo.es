@@ -88,6 +88,16 @@ section > .wrap > .label { display: none; }
 .timeline .org { color: var(--muted); font-size: .95rem; }
 .timeline p { margin-top: .2rem; }
 
+/* Último artículo: aviso en la portada y destacado en la lista */
+.hero .latest { order: 5; }
+.latest { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .6rem; justify-self: start; margin-top: .4rem; padding: .55rem .9rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); text-decoration: none; font-size: .95rem; }
+.latest:hover { border-color: var(--accent); color: var(--ink); }
+.latest-label { color: var(--accent); font-weight: 600; font-size: .85rem; }
+.latest-title { font-weight: 500; }
+.post-link.is-new { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; padding: 1rem 1.1rem; margin-bottom: .6rem; }
+.post-link.is-new h3 { font-weight: 600; }
+.new-badge { justify-self: start; font-size: .75rem; font-weight: 600; color: var(--accent); letter-spacing: .02em; }
+
 /* Blog */
 .posts { list-style: none; padding: 0; margin: 0; display: grid; }
 .post-link { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding-block: .9rem; text-decoration: none; color: inherit; }

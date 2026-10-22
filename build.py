@@ -20,7 +20,7 @@ LANGS = {
     "es": {"dir": "", "label": "ES",
            "title": "Luis Arévalo Villa · IA, operaciones y aviones",
            "desc": "Ingeniero aeroespacial en Madrid. Escribo sobre lo que aprendo usando la IA para trabajar mejor.",
-           "back": "← Volver al blog",
+           "back": "← Volver al blog", "new": "Nuevo", "latest": "Nuevo en el blog",
            "months": ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
            "months_long": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
                            "septiembre", "octubre", "noviembre", "diciembre"],
@@ -28,7 +28,7 @@ LANGS = {
     "en": {"dir": "en/", "label": "EN",
            "title": "Luis Arévalo Villa · AI, operations and planes",
            "desc": "Aerospace engineer in Madrid. I write about what I learn using AI to work better.",
-           "back": "← Back to the blog",
+           "back": "← Back to the blog", "new": "New", "latest": "New on the blog",
            "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
            "months_long": ["January", "February", "March", "April", "May", "June", "July", "August",
                            "September", "October", "November", "December"],
@@ -36,7 +36,7 @@ LANGS = {
     "de": {"dir": "de/", "label": "DE",
            "title": "Luis Arévalo Villa · KI, Operations und Flugzeuge",
            "desc": "Luft- und Raumfahrtingenieur in Madrid. Ich schreibe darüber, was ich lerne, wenn ich KI nutze, um besser zu arbeiten.",
-           "back": "← Zurück zum Blog",
+           "back": "← Zurück zum Blog", "new": "Neu", "latest": "Neu im Blog",
            "months": ["Jan.", "Feb.", "März", "Apr.", "Mai", "Juni", "Juli", "Aug.", "Sept.", "Okt.", "Nov.", "Dez."],
            "months_long": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August",
                            "September", "Oktober", "November", "Dezember"],
@@ -85,15 +85,25 @@ def langs_nav(cur, root, sub=""):
 
 
 def posts_list(code, posts):
+    # El artículo más reciente va destacado hasta que se publique el siguiente.
     items = []
-    for p in posts:
+    for i, p in enumerate(posts):
         t = p[code]
+        cls, badge = ("post-link is-new", f'<span class="new-badge">{LANGS[code]["new"]}</span>') if i == 0 else ("post-link", "")
         items.append(
-            f'<li><a class="post-link" href="blog/{p["slug"]}/">\n'
+            f'<li><a class="{cls}" href="blog/{p["slug"]}/">\n'
             f'          <span class="date">{fmt_date(p["date"], code)}</span>\n'
-            f'          <span class="body"><h3>{t["title"]}</h3><p>{t["desc"]}</p></span>\n'
+            f'          <span class="body">{badge}<h3>{t["title"]}</h3><p>{t["desc"]}</p></span>\n'
             f'        </a></li>')
     return "\n        ".join(items)
+
+
+def latest_banner(code, posts):
+    if not posts:
+        return ""
+    p = posts[0]
+    return (f'<a class="latest" href="blog/{p["slug"]}/"><span class="latest-label">{LANGS[code]["latest"]}</span>'
+            f'<span class="latest-title">{p[code]["title"]}</span><span aria-hidden="true">→</span></a>')
 
 
 def head(code, title, desc, path, og_type="website", extra=""):
@@ -146,7 +156,8 @@ def home_body(code, posts):
     body = read(f"src/body.{code}.html")
     return (body.replace("{{LANGS}}", langs_nav(code, root))
                 .replace("{{ROOT}}", root)
-                .replace("{{POSTS}}", posts_list(code, posts)))
+                .replace("{{POSTS}}", posts_list(code, posts))
+                .replace("{{LATEST}}", latest_banner(code, posts)))
 
 
 def post_body(code, post):
