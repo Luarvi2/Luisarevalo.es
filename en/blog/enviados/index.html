@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>One AI envoy for every team · Luis Arévalo</title>
+<meta name="description" content="What slows work down most isn&#x27;t technology but waiting on other teams. Pablo Fernández proposes giving every team an AI agent that keeps track of its commitments. Here&#x27;s my take.">
+<link rel="canonical" href="https://luisarevalo.es/en/blog/enviados/">
+<link rel="alternate" hreflang="es" href="https://luisarevalo.es/blog/enviados/">
+<link rel="alternate" hreflang="en" href="https://luisarevalo.es/en/blog/enviados/">
+<link rel="alternate" hreflang="de" href="https://luisarevalo.es/de/blog/enviados/">
+<link rel="alternate" hreflang="x-default" href="https://luisarevalo.es/blog/enviados/">
+<link rel="alternate" type="application/rss+xml" title="Luis Arévalo" href="https://luisarevalo.es/en/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="One AI envoy for every team · Luis Arévalo">
+<meta property="og:description" content="What slows work down most isn&#x27;t technology but waiting on other teams. Pablo Fernández proposes giving every team an AI agent that keeps track of its commitments. Here&#x27;s my take.">
+<meta property="og:url" content="https://luisarevalo.es/en/blog/enviados/">
+<meta property="og:image" content="https://luisarevalo.es/foto-luis.jpg">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-10-23">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: una columna estrecha; azul marino de base y naranja de aviación como único acento */
+:root {
+  --bg: #f2f5f9;
+  --surface: #ffffff;
+  --ink: #0f1f33;
+  --muted: #56657a;
+  --line: #d8e0ea;
+  --soft: #e6ecf3;
+  --accent: #dd5a12;
+  --on-ink: #ffffff;
+  --sans: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1522; --surface: #111e2f; --ink: #e8eef5; --muted: #97a6b8; --line: #22344a; --soft: #16263a; --accent: #ff8340; --on-ink: #0b1522;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1522; --surface: #111e2f; --ink: #e8eef5; --muted: #97a6b8; --line: #22344a; --soft: #16263a; --accent: #ff8340; --on-ink: #0b1522;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: text-decoration-color .15s; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 40rem; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Cabecera */
+header.top .wrap { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: 2rem 0; }
+.brand { font-weight: 600; text-decoration: none; }
+nav { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: .9rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+.langs { display: flex; gap: .6rem; }
+.langs a { font-size: .8rem; letter-spacing: .04em; }
+.langs a[aria-current="true"] { color: var(--accent); font-weight: 600; }
+
+h1, h2, h3 { color: var(--ink); font-weight: 600; line-height: 1.2; text-wrap: balance; margin: 0; letter-spacing: -.015em; }
+h1 { font-size: clamp(2rem, 6vw, 2.75rem); letter-spacing: -.03em; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.0625rem; }
+p { margin: 0; }
+
+section { padding-block: 3rem; }
+section + section { border-top: 1px solid var(--line); }
+section .wrap { display: grid; gap: 1.1rem; }
+
+/* Las etiquetas de sección no se muestran: el título basta */
+section > .wrap > .label { display: none; }
+.label { font-size: .85rem; color: var(--muted); }
+
+/* Portada */
+.hero { padding-block: 4rem 3.5rem; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 10rem; align-items: center; gap: 1.5rem 2rem; }
+.hero .intro { display: grid; gap: 1rem; min-width: 0; }
+.hero .intro > .label { display: block; order: 2; font-size: .95rem; color: var(--accent); font-weight: 500; }
+.hero h1 { order: 1; }
+.hero .lede { order: 3; font-size: 1.125rem; color: var(--muted); }
+.hero .lede em { font-style: normal; color: var(--ink); }
+.hero .actions { order: 4; }
+.hero .photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; }
+@media (max-width: 640px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero .photo { order: -1; width: 9rem; aspect-ratio: 1; border-radius: 50%; object-position: 50% 20%; }
+}
+
+.actions { display: flex; gap: 1.4rem; flex-wrap: wrap; align-items: center; margin-top: .3rem; }
+.btn { display: inline-flex; align-items: center; gap: .45rem; font-size: .95rem; font-weight: 500; }
+.btn.primary { background: var(--ink); color: var(--bg); padding: .6rem 1rem; border-radius: 6px; text-decoration: none; }
+.btn.primary:hover { background: var(--accent); color: var(--on-ink); }
+.btn svg { width: 15px; height: 15px; fill: currentColor; }
+.btn.primary::after, .btn.ghost::after { content: "↗"; font-size: .85em; color: var(--accent); }
+.btn.primary:hover::after { color: inherit; }
+.btn.ghost::after { content: "↓"; }
+
+/* Temas: una línea de texto, sin pastillas */
+.tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .2rem .9rem; color: var(--muted); font-size: .95rem; }
+
+/* Camino */
+.timeline { list-style: none; padding: 0 0 0 1.2rem; margin: .4rem 0 0; display: grid; gap: 2rem; border-left: 2px solid var(--line); }
+.timeline li { position: relative; }
+.timeline li::before { content: ""; position: absolute; left: calc(-1.2rem - 6px); top: .45rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+.timeline li { display: grid; gap: .35rem; }
+.timeline .when { font-size: .85rem; color: var(--accent); font-weight: 500; font-variant-numeric: tabular-nums; }
+.timeline .what { min-width: 0; display: grid; gap: .3rem; }
+.timeline .org { color: var(--muted); font-size: .95rem; }
+.timeline p { margin-top: .2rem; }
+
+/* Último artículo: aviso en la portada y destacado en la lista */
+.hero .latest { order: 5; }
+.latest { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .6rem; justify-self: start; margin-top: .4rem; padding: .55rem .9rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); text-decoration: none; font-size: .95rem; }
+.latest:hover { border-color: var(--accent); color: var(--ink); }
+.latest-label { color: var(--accent); font-weight: 600; font-size: .85rem; }
+.latest-title { font-weight: 500; }
+.post-link.is-new { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; padding: 1rem 1.1rem; margin-bottom: .6rem; }
+.post-link.is-new h3 { font-weight: 600; }
+.new-badge { justify-self: start; font-size: .75rem; font-weight: 600; color: var(--accent); letter-spacing: .02em; }
+
+/* Blog */
+.posts { list-style: none; padding: 0; margin: 0; display: grid; }
+.post-link { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding-block: .9rem; text-decoration: none; color: inherit; }
+a.post-link:hover h3 { color: var(--accent); }
+.post-link .date { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.post-link .body { display: grid; gap: .2rem; min-width: 0; }
+.post-link p { color: var(--muted); font-size: .95rem; }
+.post-link h3 { font-weight: 500; }
+div.post-link h3 { color: var(--muted); }
+.soon { font-size: .8rem; color: var(--accent); }
+
+/* Artículo */
+article section { padding-block: 3rem 4rem; }
+article .wrap { gap: 1.3rem; }
+.post-title { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+article blockquote { margin: 0; padding-left: 1rem; border-left: 3px solid var(--accent); font-size: 1.15rem; color: var(--ink); }
+article .source { font-size: .95rem; color: var(--muted); }
+article .wrap > .label { display: block; }
+.back { font-size: .9rem; color: var(--muted); text-decoration: none; }
+.back:hover { color: var(--ink); }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; padding-block: .9rem; border-block: 1px solid var(--line); font-size: .9rem; }
+.meta div { display: flex; gap: .4rem; }
+.meta .label { font-size: .9rem; }
+.meta strong { font-weight: 500; }
+article h2 { font-size: 1.2rem; margin-top: 1rem; }
+.prompt { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1rem 1.1rem; font-size: .95rem; line-height: 1.6; white-space: pre-wrap; overflow-x: auto; }
+.prompt .label { display: block; margin-bottom: .3rem; font-size: .8rem; }
+article ol, article ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .4rem; }
+.aside { color: var(--muted); font-size: .95rem; }
+
+/* Pie */
+.visits { font-variant-numeric: tabular-nums; }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding-block: 1.6rem 3rem; font-size: .85rem; color: var(--muted); }
+
+@media (max-width: 520px) {
+  .post-link { grid-template-columns: 1fr; gap: .2rem; }
+  nav { gap: .9rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../#inicio">Luis Arévalo</a>
+    <nav aria-label="Sections">
+      <a href="../../#sobre-mi">About</a>
+      <a href="../../#experiencia">Experience</a>
+      <a href="../../#blog">Blog</a>
+      <a href="../../#contacto">Contact</a>
+      <span class="langs" aria-label="Idioma / Language / Sprache"><a href="../../../blog/enviados/" hreflang="es" lang="es">ES</a><a href="../../../en/blog/enviados/" hreflang="en" lang="en" aria-current="true">EN</a><a href="../../../de/blog/enviados/" hreflang="de" lang="de">DE</a></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="post">
+  <section>
+    <div class="wrap">
+      <a class="back" href="../../#blog">← Back to the blog</a>
+      <span class="label">23 October 2026 · 5 min read</span>
+      <h1 class="post-title">One AI envoy for every team</h1>
+      <p>Pablo Fernández, who has spent eleven years working in data, recently shared a line that stopped me: the slowest part of his work is no longer the code or the analysis, it's people waiting on other people. To tackle that, he built a prototype around a very simple idea: <strong>one human team, one AI envoy</strong>.</p>
+
+      <h2>How it works</h2>
+      <p>Every team gets an AI agent, its "envoy". Its job is to keep track of the promises between teams: what we owe, what we're owed, and by when. It listens to the channels the team connects, such as Slack or Teams, and speaks up before something slips. If you need something from another team, you don't call a meeting: you ask their envoy.</p>
+      <p>One example from his prototype explains it well. Someone in marketing writes in the chat, "the pricing page will be live by the 16th". The envoy picks it up and proposes recording it as a commitment to Sales. But it only counts once that person clicks "confirm". A few days later, the envoy sends them a private message: "Pricing page for Sales is due Friday. Still on track?"</p>
+      <blockquote>"The AI proposes, people commit."</blockquote>
+      <p>That's the design rule Pablo cares about most, and to me it's the most valuable part of the idea. Giving your word to another team is a human act. What follows, marking something done, moving a date the owner already changed, or chasing what's pending, the envoy can do on its own, and only once it has earned that trust.</p>
+      <p>Each team also looks after its own envoy: it decides which channels it reads, sets its budget and holds the off switch. By his rough estimate, in a company of 80 people this could give back about 37 hours a week. That's one person's full week.</p>
+
+      <h2>Why it hits close to home</h2>
+      <p>A good part of my career has been exactly this: chasing commitments between teams. At Eurofighter I was the point of contact between IT, four partner companies and NATO for a software rollout. The hard part wasn't the technology but making sure each party knew what it expected from the others, and by when. At Laborai I delivered projects across product, data, CRM and sales without those teams reporting to me. There, the only tool you have is everyone keeping their promises.</p>
+      <p>In both cases a huge share of time went into follow-up meetings and "how's your part going?" messages. If an agent takes care of that bookkeeping, meetings can be about deciding rather than going through lists.</p>
+
+      <h2>What I'd watch out for</h2>
+      <p>I really like the idea, but I think three things decide whether it works:</p>
+      <ul>
+        <li><strong>It mustn't become a watchdog.</strong> If a team feels the envoy is there to police it, people will stop writing their commitments in the chat. That's why it matters so much that each team controls its own.</li>
+        <li><strong>It mustn't create noise.</strong> One timely reminder helps. Ten a day get ignored.</li>
+        <li><strong>Trust has to be earned step by step.</strong> Starting with the AI only proposing, and widening what it does on its own as it proves right, is exactly what I would do in a regulated environment like aviation.</li>
+      </ul>
+
+      <h2>Where I think this is heading</h2>
+      <p>I think in the coming months we'll see many more agents that don't replace anyone but take care of the invisible work between people: tracking agreements, remembering dates, flagging risks. The companies that adopt them early won't notice it in one big project, but in something simpler: fewer follow-up meetings and fewer things lost along the way.</p>
+      <p>I'll leave you with a question: how many hours a week does your team spend asking other teams how their part is going?</p>
+      <p class="source">Idea and prototype by Pablo Fernández (pablofernandez.dev). The quotes and the hours estimate are his; the opinions are mine.</p>
+      <a class="back" href="../../#blog">← Back to the blog</a>
+    </div>
+  </section>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Luis Arévalo</span>
+    <span class="visits" id="visitas" data-label="visits" hidden></span>
+  </div>
+</footer>
+<script>
+// Contador de visitas (GoatCounter). Solo se muestra a partir de MIN_VISITAS; si no responde, no se ve nada.
+(function () {
+  var MIN_VISITAS = 500;
+  var el = document.getElementById('visitas');
+  if (!el || !window.fetch || !/luisarevalo\.es$/.test(location.hostname)) return;
+  fetch('https://luisarevalo.goatcounter.com/counter/TOTAL.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.count) return;
+      var n = parseInt(String(d.count).replace(/\D/g, ''), 10);
+      if (!(n >= MIN_VISITAS)) return;
+      el.textContent = n.toLocaleString(document.documentElement.lang || 'es') + ' ' + el.dataset.label;
+      el.hidden = false;
+    })
+    .catch(function () {});
+})();
+</script>
+<script data-goatcounter="https://luisarevalo.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

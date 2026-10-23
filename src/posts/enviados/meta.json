@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-23",
+  "es": {
+    "title": "Un enviado de IA para cada equipo",
+    "desc": "Lo que más frena el trabajo no es la tecnología, sino esperar a otros equipos. Pablo Fernández propone que cada equipo tenga un agente de IA que vigile sus compromisos. Esto es lo que me parece.",
+    "read": "5 min de lectura"
+  },
+  "en": {
+    "title": "One AI envoy for every team",
+    "desc": "What slows work down most isn't technology but waiting on other teams. Pablo Fernández proposes giving every team an AI agent that keeps track of its commitments. Here's my take.",
+    "read": "5 min read"
+  },
+  "de": {
+    "title": "Ein KI-Gesandter für jedes Team",
+    "desc": "Am meisten bremst nicht die Technik, sondern das Warten auf andere Teams. Pablo Fernández schlägt vor, dass jedes Team einen KI-Agenten bekommt, der seine Zusagen im Blick behält. Das ist meine Sicht.",
+    "read": "5 Min. Lesezeit"
+  }
+}
