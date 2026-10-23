@@ -15,6 +15,19 @@ import html, json, os, re, sys
 from datetime import date
 
 SITE = "https://luisarevalo.es"
+# Temas del blog. Cada artículo lista sus temas en meta.json ("tags": [...]).
+TAGS = {
+    "liderazgo":     {"es": "Liderazgo", "en": "Leadership", "de": "Führung"},
+    "productividad": {"es": "Productividad", "en": "Productivity", "de": "Produktivität"},
+    "agentes":       {"es": "Agentes de IA", "en": "AI agents", "de": "KI-Agenten"},
+    "equipos":       {"es": "Equipos", "en": "Teams", "de": "Teams"},
+    "futuro":        {"es": "Previsiones", "en": "Predictions", "de": "Prognosen"},
+}
+FILTER_UI = {
+    "es": {"label": "Filtrar por tema", "all": "Todos", "none": "Todavía no hay artículos sobre este tema."},
+    "en": {"label": "Filter by topic", "all": "All", "none": "No articles on this topic yet."},
+    "de": {"label": "Nach Thema filtern", "all": "Alle", "none": "Zu diesem Thema gibt es noch keine Artikel."},
+}
 FONTS = "https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap"
 LANGS = {
     "es": {"dir": "", "label": "ES",
@@ -90,12 +103,33 @@ def posts_list(code, posts):
     for i, p in enumerate(posts):
         t = p[code]
         cls, badge = ("post-link is-new", f'<span class="new-badge">{LANGS[code]["new"]}</span>') if i == 0 else ("post-link", "")
+        tags = p.get("tags", [])
+        names = " · ".join(TAGS[k][code] for k in tags)
+        topics = f'<span class="topics">{names}</span>' if names else ""
         items.append(
-            f'<li><a class="{cls}" href="blog/{p["slug"]}/">\n'
+            f'<li data-tags="{" ".join(tags)}"><a class="{cls}" href="blog/{p["slug"]}/">\n'
             f'          <span class="date">{fmt_date(p["date"], code)}</span>\n'
-            f'          <span class="body">{badge}<h3>{t["title"]}</h3><p>{t["desc"]}</p></span>\n'
+            f'          <span class="body">{badge}<h3>{t["title"]}</h3><p>{t["desc"]}</p>{topics}</span>\n'
             f'        </a></li>')
     return "\n        ".join(items)
+
+
+def topic_filter(code, posts):
+    # Solo se muestran los temas que tienen al menos un artículo. Sin JavaScript queda oculto y se ve todo.
+    counts = {}
+    for p in posts:
+        for k in p.get("tags", []):
+            counts[k] = counts.get(k, 0) + 1
+    if not counts:
+        return ""
+    ui = FILTER_UI[code]
+    buttons = [f'<button type="button" class="topic" data-topic="" aria-pressed="true">{ui["all"]}</button>']
+    for k in TAGS:
+        if k in counts:
+            buttons.append(f'<button type="button" class="topic" data-topic="{k}" aria-pressed="false">'
+                           f'{TAGS[k][code]} <span class="count">{counts[k]}</span></button>')
+    return (f'<div class="topic-filter" role="group" aria-label="{ui["label"]}" hidden>' + "".join(buttons) + "</div>\n"
+            f'      <p class="topic-empty" hidden>{ui["none"]}</p>')
 
 
 def latest_banner(code, posts):
@@ -156,6 +190,7 @@ def home_body(code, posts):
     body = read(f"src/body.{code}.html")
     return (body.replace("{{LANGS}}", langs_nav(code, root))
                 .replace("{{ROOT}}", root)
+                .replace("{{FILTER}}", topic_filter(code, posts))
                 .replace("{{POSTS}}", posts_list(code, posts))
                 .replace("{{LATEST}}", latest_banner(code, posts)))
 

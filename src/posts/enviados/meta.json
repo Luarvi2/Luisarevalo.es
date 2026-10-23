@@ -1,5 +1,10 @@
 {
   "date": "2026-10-23",
+  "tags": [
+    "agentes",
+    "equipos",
+    "futuro"
+  ],
   "es": {
     "title": "Un enviado de IA para cada equipo",
     "desc": "Lo que más frena el trabajo no es la tecnología, sino esperar a otros equipos. Una idea que leí: que cada equipo tenga un agente de IA que vigile sus compromisos. Esto es lo que me parece.",
