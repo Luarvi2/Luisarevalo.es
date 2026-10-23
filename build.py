@@ -28,6 +28,28 @@ FILTER_UI = {
     "en": {"label": "Filter by topic", "all": "All", "none": "No articles on this topic yet."},
     "de": {"label": "Nach Thema filtern", "all": "Alle", "none": "Zu diesem Thema gibt es noch keine Artikel."},
 }
+# Primera visita a una página en español: si el navegador no está en español, se envía
+# a la misma página en alemán o, por defecto, en inglés. Si el visitante ya eligió un
+# idioma con el selector, se respeta. Va en el <head> para que no se vea el cambio.
+LANG_REDIRECT = """<script>
+(function () {
+  try {
+    if (!/(^|\\.)luisarevalo\\.es$/.test(location.hostname)) return;
+    if (/bot|crawl|spider|slurp|facebookexternalhit|linkedinbot/i.test(navigator.userAgent)) return;
+    if (localStorage.getItem('idioma')) return;
+    var prefs = navigator.languages || [navigator.language || ''];
+    var want = 'en';
+    for (var i = 0; i < prefs.length; i++) {
+      var l = String(prefs[i]).slice(0, 2).toLowerCase();
+      if (l === 'es' || l === 'en' || l === 'de') { want = l; break; }
+    }
+    localStorage.setItem('idioma', want);
+    if (want === 'es') return;
+    var alt = document.querySelector('link[rel="alternate"][hreflang="' + want + '"]');
+    if (alt) location.replace(alt.href + location.hash);
+  } catch (e) {}
+})();
+</script>"""
 FONTS = "https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap"
 LANGS = {
     "es": {"dir": "", "label": "ES",
@@ -150,7 +172,7 @@ def head(code, title, desc, path, og_type="website", extra=""):
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{url}">
 {alt}
-<link rel="alternate" hreflang="x-default" href="{SITE}/{path}">
+<link rel="alternate" hreflang="x-default" href="{SITE}/en/{path}">
 <link rel="alternate" type="application/rss+xml" title="Luis Arévalo" href="{feed}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{html.escape(title)}">
@@ -158,6 +180,7 @@ def head(code, title, desc, path, og_type="website", extra=""):
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{SITE}/foto-luis.jpg">
 <meta name="twitter:card" content="summary">{extra}
+{LANG_REDIRECT if code == "es" else ""}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">"""
