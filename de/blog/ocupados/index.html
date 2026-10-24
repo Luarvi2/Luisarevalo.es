@@ -100,9 +100,9 @@ section > .wrap > .label { display: none; }
 .btn.primary { background: var(--ink); color: var(--bg); padding: .6rem 1rem; border-radius: 6px; text-decoration: none; }
 .btn.primary:hover { background: var(--accent); color: var(--on-ink); }
 .btn svg { width: 15px; height: 15px; fill: currentColor; }
-.btn.primary::after, .btn.ghost::after { content: "↗"; font-size: .85em; color: var(--accent); }
+.btn.primary::after, .btn.ghost::after { content: "↗\FE0E"; font-size: .85em; color: var(--accent); }
 .btn.primary:hover::after { color: inherit; }
-.btn.ghost::after { content: "↓"; }
+.btn.ghost::after { content: "↓\FE0E"; }
 
 /* Temas: una línea de texto, sin pastillas */
 .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .2rem .9rem; color: var(--muted); font-size: .95rem; }
@@ -123,6 +123,7 @@ section > .wrap > .label { display: none; }
 .latest:hover { border-color: var(--accent); color: var(--ink); }
 .latest-label { color: var(--accent); font-weight: 600; font-size: .85rem; }
 .latest-title { font-weight: 500; }
+.latest-date { color: var(--muted); font-weight: 400; }
 .post-link.is-new { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; padding: 1rem 1.1rem; margin-bottom: .6rem; }
 .post-link.is-new h3 { font-weight: 600; }
 .new-badge { justify-self: start; font-size: .75rem; font-weight: 600; color: var(--accent); letter-spacing: .02em; }

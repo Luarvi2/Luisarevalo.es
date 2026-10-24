@@ -159,8 +159,9 @@ def latest_banner(code, posts):
     if not posts:
         return ""
     p = posts[0]
-    return (f'<a class="latest" href="blog/{p["slug"]}/"><span class="latest-label">{LANGS[code]["latest"]}</span>'
-            f'<span class="latest-title">{p[code]["title"]}</span><span aria-hidden="true">→</span></a>')
+    return (f'<a class="latest" href="blog/{p["slug"]}/"><span class="latest-label">{LANGS[code]["latest"]}'
+            f'<span class="latest-date"> · <time datetime="{p["date"]}">{fmt_date(p["date"], code, long=True)}</time></span></span>'
+            f'<span class="latest-title">{p[code]["title"]}&nbsp;<span aria-hidden="true">→</span></span></a>')
 
 
 def head(code, title, desc, path, og_type="website", extra=""):
