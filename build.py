@@ -155,12 +155,24 @@ def topic_filter(code, posts):
             f'      <p class="topic-empty" hidden>{ui["none"]}</p>')
 
 
+WEEKDAYS = {
+    "es": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
+    "en": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "de": ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"],
+}
+
+
+def short_day(iso, code):
+    d = date.fromisoformat(iso)
+    return f"{WEEKDAYS[code][d.weekday()]} {d:%d/%m}"
+
+
 def latest_banner(code, posts):
     if not posts:
         return ""
     p = posts[0]
     return (f'<a class="latest" href="blog/{p["slug"]}/"><span class="latest-label">{LANGS[code]["latest"]}'
-            f'<span class="latest-date"> · <time datetime="{p["date"]}">{date.fromisoformat(p["date"]).strftime("%d/%m")}</time></span></span>'
+            f'<span class="latest-date"> · <time datetime="{p["date"]}">{short_day(p["date"], code)}</time></span></span>'
             f'<span class="latest-title">{p[code]["title"]}&nbsp;<span aria-hidden="true">→</span></span></a>')
 
 
