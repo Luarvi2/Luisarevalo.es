@@ -160,7 +160,7 @@ def latest_banner(code, posts):
         return ""
     p = posts[0]
     return (f'<a class="latest" href="blog/{p["slug"]}/"><span class="latest-label">{LANGS[code]["latest"]}'
-            f'<span class="latest-date"> · <time datetime="{p["date"]}">{fmt_date(p["date"], code, long=True)}</time></span></span>'
+            f'<span class="latest-date"> · <time datetime="{p["date"]}">{date.fromisoformat(p["date"]).strftime("%d/%m")}</time></span></span>'
             f'<span class="latest-title">{p[code]["title"]}&nbsp;<span aria-hidden="true">→</span></span></a>')
 
 
