@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-24",
+  "tags": [
+    "producto",
+    "futuro"
+  ],
+  "es": {
+    "title": "Construir ya es fácil. Saber qué construir, no",
+    "desc": "Con la IA cualquiera monta una aplicación que parece terminada en una tarde. Pero una pantalla que funciona no es un producto. Lo que me parece que va a pasar.",
+    "read": "4 min de lectura"
+  },
+  "en": {
+    "title": "Building is easy now. Knowing what to build isn't",
+    "desc": "With AI, anyone can put together an app that looks finished in an afternoon. But a working screen isn't a product. Here's what I think comes next.",
+    "read": "4 min read"
+  },
+  "de": {
+    "title": "Bauen ist jetzt leicht. Zu wissen, was man bauen soll, nicht",
+    "desc": "Mit KI baut heute jeder an einem Nachmittag eine App, die fertig aussieht. Aber ein funktionierender Bildschirm ist noch kein Produkt. Was meiner Meinung nach als Nächstes kommt.",
+    "read": "4 Min. Lesezeit"
+  }
+}

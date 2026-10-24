@@ -21,6 +21,7 @@ TAGS = {
     "productividad": {"es": "Productividad", "en": "Productivity", "de": "Produktivität"},
     "agentes":       {"es": "Agentes de IA", "en": "AI agents", "de": "KI-Agenten"},
     "equipos":       {"es": "Equipos", "en": "Teams", "de": "Teams"},
+    "producto":      {"es": "Producto", "en": "Product", "de": "Produkt"},
     "futuro":        {"es": "Previsiones", "en": "Predictions", "de": "Prognosen"},
 }
 FILTER_UI = {
