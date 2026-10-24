@@ -177,6 +177,18 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
+
+/* Figura de las dos torres (artículo que-construir) */
+.towers { margin: .6rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.2rem; align-items: stretch; }
+.tower { display: grid; grid-template-rows: auto 1fr; gap: .6rem; min-width: 0; }
+.tower-title { font-size: .9rem; font-weight: 600; text-align: center; text-wrap: balance; }
+article .towers ol.stack { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+.stack li { color: #fff; text-align: center; border-radius: 8px; padding: .32rem .5rem; font-size: .78rem; line-height: 1.25; font-weight: 500; }
+.stack-short li { flex: 1; display: grid; place-items: center; font-size: 1rem; font-weight: 600; border-radius: 14px; background: #8a97a8; }
+.stack-short li:first-child { background: #dd5a12; }
+.stack-tall li { background: color-mix(in srgb, #dd5a12 calc(100% - var(--i) * 7%), #0f1f33); }
+.stack-tall li.is-ui { outline: 2px solid var(--ink); outline-offset: 1px; }
+.towers figcaption { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); text-align: center; }
 </style>
 </head>
 <body>
@@ -213,6 +225,12 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       </ul>
       <blockquote>"The question isn't just whether you can build it, but whether you know what should be built in the first place."</blockquote>
       <p>She illustrated it with a very clear image: to someone who isn't a designer, product design is two pieces, the interface and "make it look good". To a designer, it's a tower of fifteen: user research, framing the problem, strategy, information architecture, flows, testing, working with developers, data, go-to-market and, at the very bottom, business impact. The interface is just one of those pieces.</p>
+
+      <figure class="towers">
+        <div class="tower"><p class="tower-title">What it looks like from outside</p><ol class="stack stack-short"><li>UI design</li><li>Make it look good</li></ol></div>
+        <div class="tower"><p class="tower-title">What it actually is</p><ol class="stack stack-tall"><li style="--i:0">User research</li><li style="--i:1">Problem framing</li><li style="--i:2">Strategy and roadmap</li><li style="--i:3">Information architecture</li><li style="--i:4">Flows and wireframes</li><li style="--i:5" class="is-ui">UI design</li><li style="--i:6">Interaction design</li><li style="--i:7">Design system</li><li style="--i:8">Prototyping and testing</li><li style="--i:9">Stakeholder management</li><li style="--i:10">Working with developers</li><li style="--i:11">Data and metrics</li><li style="--i:12">Iterating on feedback</li><li style="--i:13">Go-to-market</li><li style="--i:14">Business impact</li></ol></div>
+        <figcaption>The product design tower, redrawn from the author's original image.</figcaption>
+      </figure>
 
       <h2>I've lived it from the other side</h2>
       <p>I'm not a designer, but I recognise myself on both sides of this story. I'm one of those people who get excited building things with AI: this very website was made that way. And it's true, the first version takes an afternoon.</p>

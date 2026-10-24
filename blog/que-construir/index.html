@@ -195,6 +195,18 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
+
+/* Figura de las dos torres (artículo que-construir) */
+.towers { margin: .6rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.2rem; align-items: stretch; }
+.tower { display: grid; grid-template-rows: auto 1fr; gap: .6rem; min-width: 0; }
+.tower-title { font-size: .9rem; font-weight: 600; text-align: center; text-wrap: balance; }
+article .towers ol.stack { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+.stack li { color: #fff; text-align: center; border-radius: 8px; padding: .32rem .5rem; font-size: .78rem; line-height: 1.25; font-weight: 500; }
+.stack-short li { flex: 1; display: grid; place-items: center; font-size: 1rem; font-weight: 600; border-radius: 14px; background: #8a97a8; }
+.stack-short li:first-child { background: #dd5a12; }
+.stack-tall li { background: color-mix(in srgb, #dd5a12 calc(100% - var(--i) * 7%), #0f1f33); }
+.stack-tall li.is-ui { outline: 2px solid var(--ink); outline-offset: 1px; }
+.towers figcaption { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); text-align: center; }
 </style>
 </head>
 <body>
@@ -231,6 +243,12 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       </ul>
       <blockquote>«La pregunta ya no es solo si puedes construirlo, sino si sabes qué merece la pena construir.»</blockquote>
       <p>Lo ilustraba con una imagen muy clara: para quien no es diseñador, el diseño de producto son dos piezas, la interfaz y "que quede bonito". Para quien lo es, es una torre de quince: investigar a los usuarios, plantear bien el problema, la estrategia, la arquitectura de la información, los flujos, las pruebas, el trabajo con desarrollo, los datos, la salida al mercado y, al final de todo, el impacto en el negocio. La interfaz es solo una de esas piezas.</p>
+
+      <figure class="towers">
+        <div class="tower"><p class="tower-title">Lo que se ve desde fuera</p><ol class="stack stack-short"><li>Diseño de interfaz</li><li>Que quede bonito</li></ol></div>
+        <div class="tower"><p class="tower-title">Lo que es de verdad</p><ol class="stack stack-tall"><li style="--i:0">Investigación de usuarios</li><li style="--i:1">Plantear el problema</li><li style="--i:2">Estrategia y hoja de ruta</li><li style="--i:3">Arquitectura de la información</li><li style="--i:4">Flujos y bocetos</li><li style="--i:5" class="is-ui">Diseño de interfaz</li><li style="--i:6">Diseño de interacción</li><li style="--i:7">Sistema de diseño</li><li style="--i:8">Prototipos y pruebas</li><li style="--i:9">Gestión de interesados</li><li style="--i:10">Trabajo con desarrollo</li><li style="--i:11">Datos y métricas</li><li style="--i:12">Iterar con feedback</li><li style="--i:13">Salida al mercado</li><li style="--i:14">Impacto en el negocio</li></ol></div>
+        <figcaption>La torre del diseño de producto, redibujada a partir de la imagen original de su autora.</figcaption>
+      </figure>
 
       <h2>Lo he vivido desde el otro lado</h2>
       <p>Yo no soy diseñador, pero me reconozco en las dos partes de la historia. Soy de los que se emocionan construyendo cosas con IA: esta misma web la he hecho así. Y es verdad que la primera versión sale en una tarde.</p>

@@ -177,6 +177,18 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
+
+/* Figura de las dos torres (artículo que-construir) */
+.towers { margin: .6rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.2rem; align-items: stretch; }
+.tower { display: grid; grid-template-rows: auto 1fr; gap: .6rem; min-width: 0; }
+.tower-title { font-size: .9rem; font-weight: 600; text-align: center; text-wrap: balance; }
+article .towers ol.stack { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+.stack li { color: #fff; text-align: center; border-radius: 8px; padding: .32rem .5rem; font-size: .78rem; line-height: 1.25; font-weight: 500; }
+.stack-short li { flex: 1; display: grid; place-items: center; font-size: 1rem; font-weight: 600; border-radius: 14px; background: #8a97a8; }
+.stack-short li:first-child { background: #dd5a12; }
+.stack-tall li { background: color-mix(in srgb, #dd5a12 calc(100% - var(--i) * 7%), #0f1f33); }
+.stack-tall li.is-ui { outline: 2px solid var(--ink); outline-offset: 1px; }
+.towers figcaption { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); text-align: center; }
 </style>
 </head>
 <body>
@@ -213,6 +225,12 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       </ul>
       <blockquote>„Die Frage ist nicht nur, ob du es bauen kannst, sondern ob du weißt, was es überhaupt wert ist, gebaut zu werden.“</blockquote>
       <p>Sie hat es mit einem sehr klaren Bild gezeigt: Für Nicht-Designer besteht Produktdesign aus zwei Teilen, der Oberfläche und „hübsch machen“. Für Designer ist es ein Turm aus fünfzehn: Nutzerforschung, das Problem richtig formulieren, Strategie, Informationsarchitektur, Abläufe, Tests, Zusammenarbeit mit der Entwicklung, Daten, Markteinführung und ganz unten die Wirkung aufs Geschäft. Die Oberfläche ist nur eines dieser Teile.</p>
+
+      <figure class="towers">
+        <div class="tower"><p class="tower-title">Wie es von außen aussieht</p><ol class="stack stack-short"><li>Oberflächendesign</li><li>Hübsch machen</li></ol></div>
+        <div class="tower"><p class="tower-title">Was es wirklich ist</p><ol class="stack stack-tall"><li style="--i:0">Nutzerforschung</li><li style="--i:1">Problem formulieren</li><li style="--i:2">Strategie und Roadmap</li><li style="--i:3">Informationsarchitektur</li><li style="--i:4">Abläufe und Wireframes</li><li style="--i:5" class="is-ui">Oberflächendesign</li><li style="--i:6">Interaktionsdesign</li><li style="--i:7">Designsystem</li><li style="--i:8">Prototypen und Tests</li><li style="--i:9">Stakeholder-Management</li><li style="--i:10">Zusammenarbeit mit der Entwicklung</li><li style="--i:11">Daten und Kennzahlen</li><li style="--i:12">Iterieren mit Feedback</li><li style="--i:13">Markteinführung</li><li style="--i:14">Wirkung aufs Geschäft</li></ol></div>
+        <figcaption>Der Turm des Produktdesigns, nachgezeichnet nach dem Originalbild der Autorin.</figcaption>
+      </figure>
 
       <h2>Ich kenne es von der anderen Seite</h2>
       <p>Ich bin kein Designer, aber ich erkenne mich in beiden Seiten dieser Geschichte wieder. Ich gehöre zu denen, die sich begeistern, wenn sie mit KI etwas bauen: Genau so ist diese Website entstanden. Und es stimmt, die erste Version steht an einem Nachmittag.</p>
