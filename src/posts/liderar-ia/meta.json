@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-26",
+  "tags": [
+    "liderazgo",
+    "equipos",
+    "futuro"
+  ],
+  "es": {
+    "title": "Liderar la IA no es contar PRs",
+    "desc": "Leí una receta en seis pasos para que los directivos se suban a la IA ya. Comparto la urgencia, pero no la forma de medirla. Lo que haría yo.",
+    "read": "5 min de lectura"
+  },
+  "en": {
+    "title": "Leading AI isn't counting PRs",
+    "desc": "I read a six-step recipe for leaders to get on board with AI right now. I share the urgency, but not the way it measures success. Here's what I'd do.",
+    "read": "5 min read"
+  },
+  "de": {
+    "title": "KI führen heißt nicht, PRs zu zählen",
+    "desc": "Ich habe ein Rezept in sechs Schritten gelesen, mit dem Führungskräfte sofort auf KI setzen sollen. Die Dringlichkeit teile ich, die Art zu messen nicht. Was ich tun würde.",
+    "read": "5 Min. Lesezeit"
+  }
+}
