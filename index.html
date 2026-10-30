@@ -207,6 +207,18 @@ article .towers ol.stack { list-style: none; margin: 0; padding: 0; display: fle
 .stack-tall li { background: color-mix(in srgb, #dd5a12 calc(100% - var(--i) * 7%), #0f1f33); }
 .stack-tall li.is-ui { outline: 2px solid var(--ink); outline-offset: 1px; }
 .towers figcaption { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); text-align: center; }
+
+/* Figura de pasos (artículo higgsfield) */
+.flow { margin: .6rem 0; display: grid; gap: .6rem; }
+article .flow ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: .5rem; counter-reset: none; }
+.flow li { position: relative; display: grid; align-content: start; gap: .45rem; padding: .8rem .7rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; font-size: .85rem; line-height: 1.3; }
+.flow li:last-child { border-color: var(--accent); }
+.step-n { display: grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 600; font-size: .8rem; }
+.flow figcaption { font-size: .85rem; color: var(--muted); text-align: center; }
+@media (max-width: 640px) {
+  article .flow ol { grid-template-columns: 1fr; gap: .4rem; }
+  .flow li { grid-template-columns: auto 1fr; align-items: center; gap: .7rem; padding: .6rem .8rem; }
+}
 </style>
 </head>
 <body>
@@ -237,7 +249,7 @@ article .towers ol.stack { list-style: none; margin: 0; padding: 0; display: fle
         </a>
         <a class="btn ghost" href="#blog">Leer el blog</a>
       </div>
-      <a class="latest" href="blog/liderar-ia/"><span class="latest-label">Nuevo en el blog<span class="latest-date"> · <time datetime="2026-10-26">Lunes 26/10</time></span></span><span class="latest-title">Liderar la IA no es contar PRs&nbsp;<span aria-hidden="true">→</span></span></a>
+      <a class="latest" href="blog/higgsfield/"><span class="latest-label">Nuevo en el blog<span class="latest-date"> · <time datetime="2026-10-30">Viernes 30/10</time></span></span><span class="latest-title">Un estudio de anuncios en el navegador&nbsp;<span aria-hidden="true">→</span></span></a>
       </div>
       <img class="photo" src="foto-luis.jpg" alt="Retrato de Luis Arévalo">
     </div>
@@ -291,12 +303,16 @@ article .towers ol.stack { list-style: none; margin: 0; padding: 0; display: fle
     <div class="wrap">
       <span class="label">Blog</span>
       <h2>Lo que voy aprendiendo con la IA</h2>
-      <div class="topic-filter" role="group" aria-label="Filtrar por tema" hidden><button type="button" class="topic" data-topic="" aria-pressed="true">Todos</button><button type="button" class="topic" data-topic="liderazgo" aria-pressed="false">Liderazgo <span class="count">2</span></button><button type="button" class="topic" data-topic="productividad" aria-pressed="false">Productividad <span class="count">1</span></button><button type="button" class="topic" data-topic="agentes" aria-pressed="false">Agentes de IA <span class="count">1</span></button><button type="button" class="topic" data-topic="equipos" aria-pressed="false">Equipos <span class="count">3</span></button><button type="button" class="topic" data-topic="producto" aria-pressed="false">Producto <span class="count">1</span></button><button type="button" class="topic" data-topic="futuro" aria-pressed="false">Previsiones <span class="count">4</span></button></div>
+      <div class="topic-filter" role="group" aria-label="Filtrar por tema" hidden><button type="button" class="topic" data-topic="" aria-pressed="true">Todos</button><button type="button" class="topic" data-topic="liderazgo" aria-pressed="false">Liderazgo <span class="count">2</span></button><button type="button" class="topic" data-topic="productividad" aria-pressed="false">Productividad <span class="count">1</span></button><button type="button" class="topic" data-topic="agentes" aria-pressed="false">Agentes de IA <span class="count">1</span></button><button type="button" class="topic" data-topic="equipos" aria-pressed="false">Equipos <span class="count">3</span></button><button type="button" class="topic" data-topic="producto" aria-pressed="false">Producto <span class="count">1</span></button><button type="button" class="topic" data-topic="marketing" aria-pressed="false">Marketing <span class="count">1</span></button><button type="button" class="topic" data-topic="futuro" aria-pressed="false">Previsiones <span class="count">5</span></button></div>
       <p class="topic-empty" hidden>Todavía no hay artículos sobre este tema.</p>
       <ul class="posts">
-        <li data-tags="liderazgo equipos futuro"><a class="post-link is-new" href="blog/liderar-ia/">
+        <li data-tags="marketing futuro"><a class="post-link is-new" href="blog/higgsfield/">
+          <span class="date">30 oct 2026</span>
+          <span class="body"><span class="new-badge">Nuevo</span><h3>Un estudio de anuncios en el navegador</h3><p>He estado mirando Higgsfield, una herramienta que convierte la página de un producto en un anuncio en vídeo con presentador incluido. Qué es, para qué sirve y lo que creo que va a cambiar.</p><span class="topics">Marketing · Previsiones</span></span>
+        </a></li>
+        <li data-tags="liderazgo equipos futuro"><a class="post-link" href="blog/liderar-ia/">
           <span class="date">26 oct 2026</span>
-          <span class="body"><span class="new-badge">Nuevo</span><h3>Liderar la IA no es contar PRs</h3><p>Leí una receta en seis pasos para que los directivos se suban a la IA ya. Comparto la urgencia, pero no la forma de medirla. Lo que haría yo.</p><span class="topics">Liderazgo · Equipos · Previsiones</span></span>
+          <span class="body"><h3>Liderar la IA no es contar PRs</h3><p>Leí una receta en seis pasos para que los directivos se suban a la IA ya. Comparto la urgencia, pero no la forma de medirla. Lo que haría yo.</p><span class="topics">Liderazgo · Equipos · Previsiones</span></span>
         </a></li>
         <li data-tags="producto equipos futuro"><a class="post-link" href="blog/que-construir/">
           <span class="date">24 oct 2026</span>

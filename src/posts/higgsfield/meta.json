@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-30",
+  "tags": [
+    "marketing",
+    "futuro"
+  ],
+  "es": {
+    "title": "Un estudio de anuncios en el navegador",
+    "desc": "He estado mirando Higgsfield, una herramienta que convierte la página de un producto en un anuncio en vídeo con presentador incluido. Qué es, para qué sirve y lo que creo que va a cambiar.",
+    "read": "5 min de lectura"
+  },
+  "en": {
+    "title": "An ad studio in your browser",
+    "desc": "I've been looking at Higgsfield, a tool that turns a product page into a video ad, presenter included. What it is, what it's for and what I think it will change.",
+    "read": "5 min read"
+  },
+  "de": {
+    "title": "Ein Werbestudio im Browser",
+    "desc": "Ich habe mir Higgsfield angesehen, ein Werkzeug, das eine Produktseite in ein Werbevideo verwandelt, samt Sprecher. Was es ist, wofür es taugt und was es meiner Meinung nach verändern wird.",
+    "read": "5 Min. Lesezeit"
+  }
+}
