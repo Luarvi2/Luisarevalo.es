@@ -23,6 +23,7 @@ TAGS = {
     "equipos":       {"es": "Equipos", "en": "Teams", "de": "Teams"},
     "producto":      {"es": "Producto", "en": "Product", "de": "Produkt"},
     "marketing":     {"es": "Marketing", "en": "Marketing", "de": "Marketing"},
+    "seguridad":     {"es": "Seguridad", "en": "Safety", "de": "Sicherheit"},
     "futuro":        {"es": "Previsiones", "en": "Predictions", "de": "Prognosen"},
 }
 FILTER_UI = {

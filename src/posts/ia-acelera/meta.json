@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-07",
+  "tags": [
+    "seguridad",
+    "liderazgo",
+    "futuro"
+  ],
+  "es": {
+    "title": "Cuando la IA escribe casi todo el código",
+    "desc": "Anthropic dice que más del 90 % de su código ya lo escribe su propia IA y que podría estar cerca de un progreso «drásticamente acelerado». Lo que me enseñó la aviación sobre volar más rápido de lo que puedes medir.",
+    "read": "5 min de lectura"
+  },
+  "en": {
+    "title": "When AI writes almost all the code",
+    "desc": "Anthropic says over 90% of its code is now written by its own AI, and that it may be close to “drastically accelerated” progress. What aviation taught me about flying faster than you can measure.",
+    "read": "5 min read"
+  },
+  "de": {
+    "title": "Wenn die KI fast den ganzen Code schreibt",
+    "desc": "Anthropic sagt, dass inzwischen über 90 % seines Codes von der eigenen KI geschrieben werden und dass ein „drastisch beschleunigter“ Fortschritt bevorstehen könnte. Was mich die Luftfahrt über das Fliegen schneller als die eigenen Messungen gelehrt hat.",
+    "read": "5 Min. Lesezeit"
+  }
+}
