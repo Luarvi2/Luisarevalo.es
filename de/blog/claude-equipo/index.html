@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude als Teammitglied · Luis Arévalo</title>
+<meta name="description" content="Auf einer Claude-Konferenz habe ich gesehen, wie ein Team mit KI direkt in seinem Chat arbeitet: Sie schreibt Protokoll, hakt bei Lieferungen nach, programmiert, ohne dass jemand den Laptop aufklappt, und überwacht die Systeme rund um die Uhr. Was ich mitgenommen habe und worauf ich achten würde.">
+<link rel="canonical" href="https://luisarevalo.es/de/blog/claude-equipo/">
+<link rel="alternate" hreflang="es" href="https://luisarevalo.es/blog/claude-equipo/">
+<link rel="alternate" hreflang="en" href="https://luisarevalo.es/en/blog/claude-equipo/">
+<link rel="alternate" hreflang="de" href="https://luisarevalo.es/de/blog/claude-equipo/">
+<link rel="alternate" hreflang="x-default" href="https://luisarevalo.es/en/blog/claude-equipo/">
+<link rel="alternate" type="application/rss+xml" title="Luis Arévalo" href="https://luisarevalo.es/de/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude als Teammitglied · Luis Arévalo">
+<meta property="og:description" content="Auf einer Claude-Konferenz habe ich gesehen, wie ein Team mit KI direkt in seinem Chat arbeitet: Sie schreibt Protokoll, hakt bei Lieferungen nach, programmiert, ohne dass jemand den Laptop aufklappt, und überwacht die Systeme rund um die Uhr. Was ich mitgenommen habe und worauf ich achten würde.">
+<meta property="og:url" content="https://luisarevalo.es/de/blog/claude-equipo/">
+<meta property="og:image" content="https://luisarevalo.es/foto-luis.jpg">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-16">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: una columna estrecha; azul marino de base y naranja de aviación como único acento */
+:root {
+  --bg: #f2f5f9;
+  --surface: #ffffff;
+  --ink: #0f1f33;
+  --muted: #56657a;
+  --line: #d8e0ea;
+  --soft: #e6ecf3;
+  --accent: #dd5a12;
+  --on-ink: #ffffff;
+  --sans: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1522; --surface: #111e2f; --ink: #e8eef5; --muted: #97a6b8; --line: #22344a; --soft: #16263a; --accent: #ff8340; --on-ink: #0b1522;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1522; --surface: #111e2f; --ink: #e8eef5; --muted: #97a6b8; --line: #22344a; --soft: #16263a; --accent: #ff8340; --on-ink: #0b1522;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: text-decoration-color .15s; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 40rem; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Cabecera */
+header.top .wrap { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: 2rem 0; }
+.brand { font-weight: 600; text-decoration: none; }
+nav { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: .9rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+.langs { display: flex; gap: .6rem; }
+.langs a { font-size: .8rem; letter-spacing: .04em; }
+.langs a[aria-current="true"] { color: var(--accent); font-weight: 600; }
+
+h1, h2, h3 { color: var(--ink); font-weight: 600; line-height: 1.2; text-wrap: balance; margin: 0; letter-spacing: -.015em; }
+h1 { font-size: clamp(2rem, 6vw, 2.75rem); letter-spacing: -.03em; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.0625rem; }
+p { margin: 0; }
+
+section { padding-block: 3rem; }
+section + section { border-top: 1px solid var(--line); }
+section .wrap { display: grid; gap: 1.1rem; }
+
+/* Las etiquetas de sección no se muestran: el título basta */
+section > .wrap > .label { display: none; }
+.label { font-size: .85rem; color: var(--muted); }
+
+/* Portada */
+.hero { padding-block: 4rem 3.5rem; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 10rem; align-items: center; gap: 1.5rem 2rem; }
+.hero .intro { display: grid; gap: 1rem; min-width: 0; }
+.hero .intro > .label { display: block; order: 2; font-size: .95rem; color: var(--accent); font-weight: 500; }
+.hero h1 { order: 1; }
+.hero .lede { order: 3; font-size: 1.125rem; color: var(--muted); }
+.hero .lede em { font-style: normal; color: var(--ink); }
+.hero .actions { order: 4; }
+.hero .photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; }
+@media (max-width: 640px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero .photo { order: -1; width: 9rem; aspect-ratio: 1; border-radius: 50%; object-position: 50% 20%; }
+}
+
+.actions { display: flex; gap: 1.4rem; flex-wrap: wrap; align-items: center; margin-top: .3rem; }
+.btn { display: inline-flex; align-items: center; gap: .45rem; font-size: .95rem; font-weight: 500; }
+.btn.primary { background: var(--ink); color: var(--bg); padding: .6rem 1rem; border-radius: 6px; text-decoration: none; }
+.btn.primary:hover { background: var(--accent); color: var(--on-ink); }
+.btn svg { width: 15px; height: 15px; fill: currentColor; }
+.btn.primary::after, .btn.ghost::after { content: "↗\FE0E"; font-size: .85em; color: var(--accent); }
+.btn.primary:hover::after { color: inherit; }
+.btn.ghost::after { content: "↓\FE0E"; }
+
+/* Temas: una línea de texto, sin pastillas */
+.tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .2rem .9rem; color: var(--muted); font-size: .95rem; }
+
+/* Camino */
+.timeline { list-style: none; padding: 0 0 0 1.2rem; margin: .4rem 0 0; display: grid; gap: 2rem; border-left: 2px solid var(--line); }
+.timeline li { position: relative; }
+.timeline li::before { content: ""; position: absolute; left: calc(-1.2rem - 6px); top: .45rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+.timeline li { display: grid; gap: .35rem; }
+.timeline .when { font-size: .85rem; color: var(--accent); font-weight: 500; font-variant-numeric: tabular-nums; }
+.timeline .what { min-width: 0; display: grid; gap: .3rem; }
+.timeline .org { color: var(--muted); font-size: .95rem; }
+.timeline p { margin-top: .2rem; }
+
+/* Último artículo: aviso en la portada y destacado en la lista */
+.hero .latest { order: 5; }
+.latest { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .6rem; justify-self: start; margin-top: .4rem; padding: .55rem .9rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); text-decoration: none; font-size: .95rem; }
+.latest:hover { border-color: var(--accent); color: var(--ink); }
+.latest-label { color: var(--accent); font-weight: 600; font-size: .85rem; }
+.latest-title { font-weight: 500; }
+.latest-date { color: var(--muted); font-weight: 400; }
+.post-link.is-new { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; padding: 1rem 1.1rem; margin-bottom: .6rem; }
+.post-link.is-new h3 { font-weight: 600; }
+.new-badge { justify-self: start; font-size: .75rem; font-weight: 600; color: var(--accent); letter-spacing: .02em; }
+
+/* Blog */
+.topic-filter { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .4rem; }
+.topic { font: inherit; font-size: .9rem; color: var(--muted); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: .35rem .75rem; cursor: pointer; }
+.topic:hover { color: var(--ink); border-color: var(--muted); }
+.topic:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.topic[aria-pressed="true"] { color: var(--bg); background: var(--ink); border-color: var(--ink); }
+.topic .count { font-size: .8em; opacity: .7; font-variant-numeric: tabular-nums; }
+.topic-empty { color: var(--muted); font-size: .95rem; }
+.topics { font-size: .8rem; color: var(--muted); }
+.posts { list-style: none; padding: 0; margin: 0; display: grid; }
+.post-link { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding-block: .9rem; text-decoration: none; color: inherit; }
+a.post-link:hover h3 { color: var(--accent); }
+.post-link .date { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.post-link .body { display: grid; gap: .2rem; min-width: 0; }
+.post-link p { color: var(--muted); font-size: .95rem; }
+.post-link h3 { font-weight: 500; }
+div.post-link h3 { color: var(--muted); }
+.soon { font-size: .8rem; color: var(--accent); }
+
+/* Artículo */
+article section { padding-block: 3rem 4rem; }
+article .wrap { gap: 1.3rem; }
+.post-title { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+article blockquote { margin: 0; padding-left: 1rem; border-left: 3px solid var(--accent); font-size: 1.15rem; color: var(--ink); }
+article .source { font-size: .95rem; color: var(--muted); }
+article .wrap > .label { display: block; }
+.back { font-size: .9rem; color: var(--muted); text-decoration: none; }
+.back:hover { color: var(--ink); }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; padding-block: .9rem; border-block: 1px solid var(--line); font-size: .9rem; }
+.meta div { display: flex; gap: .4rem; }
+.meta .label { font-size: .9rem; }
+.meta strong { font-weight: 500; }
+article h2 { font-size: 1.2rem; margin-top: 1rem; }
+.prompt { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1rem 1.1rem; font-size: .95rem; line-height: 1.6; white-space: pre-wrap; overflow-x: auto; }
+.prompt .label { display: block; margin-bottom: .3rem; font-size: .8rem; }
+article ol, article ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .4rem; }
+.aside { color: var(--muted); font-size: .95rem; }
+
+/* Pie */
+.visits { font-variant-numeric: tabular-nums; }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding-block: 1.6rem 3rem; font-size: .85rem; color: var(--muted); }
+
+@media (max-width: 520px) {
+  .post-link { grid-template-columns: 1fr; gap: .2rem; }
+  nav { gap: .9rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Figura de las dos torres (artículo que-construir) */
+.towers { margin: .6rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.2rem; align-items: stretch; }
+.tower { display: grid; grid-template-rows: auto 1fr; gap: .6rem; min-width: 0; }
+.tower-title { font-size: .9rem; font-weight: 600; text-align: center; text-wrap: balance; }
+article .towers ol.stack { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+.stack li { color: #fff; text-align: center; border-radius: 8px; padding: .32rem .5rem; font-size: .78rem; line-height: 1.25; font-weight: 500; }
+.stack-short li { flex: 1; display: grid; place-items: center; font-size: 1rem; font-weight: 600; border-radius: 14px; background: #8a97a8; }
+.stack-short li:first-child { background: #dd5a12; }
+.stack-tall li { background: color-mix(in srgb, #dd5a12 calc(100% - var(--i) * 7%), #0f1f33); }
+.stack-tall li.is-ui { outline: 2px solid var(--ink); outline-offset: 1px; }
+.towers figcaption { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); text-align: center; }
+
+/* Figura de pasos (artículo higgsfield) */
+.flow { margin: .6rem 0; display: grid; gap: .6rem; }
+article .flow ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: .5rem; counter-reset: none; }
+.flow li { position: relative; display: grid; align-content: start; gap: .45rem; padding: .8rem .7rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; font-size: .85rem; line-height: 1.3; }
+.flow li:last-child { border-color: var(--accent); }
+.step-n { display: grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 600; font-size: .8rem; }
+.flow figcaption { font-size: .85rem; color: var(--muted); text-align: center; }
+@media (max-width: 640px) {
+  article .flow ol { grid-template-columns: 1fr; gap: .4rem; }
+  .flow li { grid-template-columns: auto 1fr; align-items: center; gap: .7rem; padding: .6rem .8rem; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../#inicio">Luis Arévalo</a>
+    <nav aria-label="Bereiche">
+      <a href="../../#sobre-mi">Über mich</a>
+      <a href="../../#experiencia">Werdegang</a>
+      <a href="../../#blog">Blog</a>
+      <a href="../../#contacto">Kontakt</a>
+      <span class="langs" aria-label="Idioma / Language / Sprache"><a href="../../../blog/claude-equipo/" hreflang="es" lang="es">ES</a><a href="../../../en/blog/claude-equipo/" hreflang="en" lang="en">EN</a><a href="../../../de/blog/claude-equipo/" hreflang="de" lang="de" aria-current="true">DE</a></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="post">
+  <section>
+    <div class="wrap">
+      <a class="back" href="../../#blog">← Zurück zum Blog</a>
+      <span class="label">16. November 2026 · 6 Min. Lesezeit</span>
+      <h1 class="post-title">Claude als Teammitglied</h1>
+      <p>Vor ein paar Tagen war ich auf einer Konferenz über Claude, die KI von Anthropic. Mehrere Leute, die sie täglich nutzen, haben ihre Tricks geteilt, und einer von ihnen hat mir etwas gezeigt, das mir nicht mehr aus dem Kopf geht: In seiner Firma ist Claude kein Werkzeug, das jeder auf seinem eigenen Rechner öffnet. <strong>Claude ist ein weiteres Mitglied des Teams</strong>, mit einem eigenen Platz im Chat, in dem alle arbeiten.</p>
+
+      <h2>Ein Schiedsrichter im Kanal</h2>
+      <p>Sie nutzen Slack, und dort kann man Claude erwähnen wie einen Kollegen. Sie haben einen Kanal mit dem ganzen Team und Claude mittendrin, mit einer klaren Rolle:</p>
+      <ul>
+        <li>Claude schreibt Protokoll in Meetings und hält fest, was entschieden wurde und wer wofür zuständig ist;</li>
+        <li>verfolgt den Fortschritt, sodass jeder fragen kann, wie etwas läuft;</li>
+        <li>und erinnert diejenigen, die etwas noch nicht geliefert haben, damit niemand den Nörgler spielen muss.</li>
+      </ul>
+      <p>Er beschrieb es als Schiedsrichter: Claude spielt nicht mit, weiß aber, in welcher Minute wir sind, wer den Ball hat und wann jemand eine Regel gebrochen hat. Und weil Claude alles sieht, kann niemand besser sagen, wo das Team gerade steht.</p>
+
+      <h2>Programmieren, ohne den Laptop aufzuklappen</h2>
+      <p>Der zweite Teil hat mich begeistert. Um etwas an ihrer Plattform zu ändern oder ein neues Werkzeug zu bauen, setzt sich diese Person nicht an den Rechner. Er spricht mit Claude, zum Beispiel vom Handy aus, und Claude verbindet sich selbst mit dem GitHub-Repository, in dem der Code liegt, bereitet die Änderungen vor und veröffentlicht sie.</p>
+      <p>Ich erzähle das mit einem Augenzwinkern, denn genau so funktioniert auch diese Website. Ich bin kein Programmierer. Ich erkläre Claude, was ich möchte, so wie bei diesem Artikel, Claude bereitet die Änderungen auf GitHub vor und ich prüfe sie, bevor sie online gehen. Mein Rechner kann dabei ausgeschaltet sein.</p>
+
+      <h2>Systeme überwachen wie ein Flugzeug</h2>
+      <p>Die dritte Idee war Transparenz in Echtzeit. Sie haben Bots, die ständig prüfen, wie ihre Systeme laufen: Fehler, Datenbankausfälle, verlorene Daten. Alles landet im selben Slack, sodass das Team es dort erfährt, wo es ohnehin schon spricht.</p>
+      <p>Das hat mich stark an die Luftfahrt erinnert. Ein modernes Flugzeug sendet während des Flugs Daten seiner Triebwerke und Systeme an den Boden. Wenn sich ein Problem anbahnt, weiß die Wartung Bescheid, bevor das Flugzeug landet, und kann das Ersatzteil bereitlegen. Es geht nicht darum zu reagieren, wenn etwas kaputtgeht, sondern es zu erfahren, bevor es kaputtgeht.</p>
+
+      <h2>Warum mich das persönlich betrifft</h2>
+      <p>In meinen Projekten ging ein riesiger Teil der Zeit in das, was niemand sieht: Protokolle, To-do-Listen, Nachrichten wie „Wie läuft es bei dir?“. Bei Eurofighter habe ich IT, vier Partnerunternehmen und die NATO koordiniert, und alle auf dem gleichen Stand zu halten war fast ein eigener Job. Hätte jemand diese Buchführung für mich übernommen, hätte ich die Zeit fürs Entscheiden und Problemlösen nutzen können.</p>
+      <p>Vor ein paar Wochen habe ich über <a href="../enviados/">einen KI-Gesandten für jedes Team</a> geschrieben. Was ich auf der Konferenz gesehen habe, ist genau diese Idee, nur schon im Einsatz in einer echten Firma.</p>
+
+      <h2>Worauf ich achten würde</h2>
+      <ul>
+        <li><strong>Jemand prüft, bevor etwas live geht.</strong> Dass die KI Änderungen vorbereitet, ohne dass man den Laptop aufklappt, ist großartig. Dass sie sie veröffentlicht, ohne dass jemand draufschaut, ist etwas anderes. In der Luftfahrt fliegt keine Änderung ohne zweite Unterschrift, und hier würde ich es genauso halten, zumindest bei allem Wichtigen.</li>
+        <li><strong>Erinnern, ohne zu nerven.</strong> Eine rechtzeitige Erinnerung hilft. Zehn am Tag werden ignoriert, und bei Systemalarmen ist es genauso: Wenn alles piept, piept nichts.</li>
+        <li><strong>Der Schiedsrichter wird nicht zum Chef.</strong> Claude kann den Überblick behalten und erinnern, aber Prioritäten und Entscheidungen müssen von Menschen kommen.</li>
+        <li><strong>Nur Zugriff auf das, was nötig ist.</strong> Ein neuer Kollege bekommt am ersten Tag auch nicht alle Schlüssel. Bei der KI genauso.</li>
+      </ul>
+
+      <h2>Wohin das meiner Meinung nach führt</h2>
+      <p>Ich glaube, bald wird es normal sein, die KI direkt im Team-Chat zu haben, nicht als separates Fenster, das jeder auf seine Art nutzt. Am meisten wird sich nicht das Programmiertempo ändern, sondern die Koordination: zu wissen, wo alles steht, ohne fragen zu müssen. Und die Arbeit der Menschen verschiebt sich hin zum Entscheiden, Prüfen und Verantworten dessen, was veröffentlicht wird.</p>
+      <p>Eine Frage an dich: Wenn dein Team morgen einen Kollegen hätte, der Protokoll schreibt, Lieferungen nachhakt und die Systeme überwacht, was würdest du ihm als Erstes übergeben?</p>
+      <p class="source">Wie sie Claude in Slack, auf GitHub und zur Überwachung ihrer Systeme einsetzen, hat eine Person auf einer Claude-Konferenz erzählt. Meinung und Prognosen sind meine eigenen.</p>
+      <a class="back" href="../../#blog">← Zurück zum Blog</a>
+    </div>
+  </section>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Luis Arévalo</span>
+    <span class="visits" id="visitas" data-label="Besuche" hidden></span>
+  </div>
+</footer>
+<script>
+// Guarda el idioma que el visitante elige con el selector, para no volver a redirigirle.
+document.querySelectorAll('.langs a').forEach(function (a) {
+  a.addEventListener('click', function () {
+    try { localStorage.setItem('idioma', a.lang); } catch (e) {}
+  });
+});
+
+// Contador de visitas (GoatCounter). Solo se muestra a partir de MIN_VISITAS; si no responde, no se ve nada.
+(function () {
+  var MIN_VISITAS = 500;
+  var el = document.getElementById('visitas');
+  if (!el || !window.fetch || !/luisarevalo\.es$/.test(location.hostname)) return;
+  fetch('https://luisarevalo.goatcounter.com/counter/TOTAL.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.count) return;
+      var n = parseInt(String(d.count).replace(/\D/g, ''), 10);
+      if (!(n >= MIN_VISITAS)) return;
+      el.textContent = n.toLocaleString(document.documentElement.lang || 'es') + ' ' + el.dataset.label;
+      el.hidden = false;
+    })
+    .catch(function () {});
+})();
+
+// Filtro de temas del blog. Las ideas sin publicar solo se ven con "Todos".
+(function () {
+  var bar = document.querySelector('.topic-filter');
+  if (!bar) return;
+  var items = document.querySelectorAll('.posts > li');
+  var empty = document.querySelector('.topic-empty');
+  bar.hidden = false;
+  bar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.topic');
+    if (!btn) return;
+    var topic = btn.dataset.topic;
+    bar.querySelectorAll('.topic').forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+    var shown = 0;
+    items.forEach(function (li) {
+      var tags = (li.dataset.tags || '').split(' ');
+      var show = !topic || tags.indexOf(topic) !== -1;
+      li.hidden = !show;
+      if (show) shown++;
+    });
+    if (empty) empty.hidden = shown > 0;
+  });
+})();
+</script>
+<script data-goatcounter="https://luisarevalo.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

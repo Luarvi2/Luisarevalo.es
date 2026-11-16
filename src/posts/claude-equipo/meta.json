@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-16",
+  "tags": [
+    "agentes",
+    "equipos",
+    "productividad",
+    "futuro"
+  ],
+  "es": {
+    "title": "Claude como compañero de equipo",
+    "desc": "En un congreso de Claude vi cómo un equipo trabaja con la IA dentro de su chat: toma notas, persigue entregas, programa sin que nadie abra el ordenador y vigila los sistemas día y noche. Lo que me llevé y lo que vigilaría.",
+    "read": "6 min de lectura"
+  },
+  "en": {
+    "title": "Claude as a teammate",
+    "desc": "At a Claude conference I saw how one team works with AI inside their chat: it takes notes, chases deliverables, ships code without anyone opening a laptop and watches the systems day and night. What I took away, and what I'd keep an eye on.",
+    "read": "6 min read"
+  },
+  "de": {
+    "title": "Claude als Teammitglied",
+    "desc": "Auf einer Claude-Konferenz habe ich gesehen, wie ein Team mit KI direkt in seinem Chat arbeitet: Sie schreibt Protokoll, hakt bei Lieferungen nach, programmiert, ohne dass jemand den Laptop aufklappt, und überwacht die Systeme rund um die Uhr. Was ich mitgenommen habe und worauf ich achten würde.",
+    "read": "6 Min. Lesezeit"
+  }
+}

@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude como compañero de equipo · Luis Arévalo</title>
+<meta name="description" content="En un congreso de Claude vi cómo un equipo trabaja con la IA dentro de su chat: toma notas, persigue entregas, programa sin que nadie abra el ordenador y vigila los sistemas día y noche. Lo que me llevé y lo que vigilaría.">
+<link rel="canonical" href="https://luisarevalo.es/blog/claude-equipo/">
+<link rel="alternate" hreflang="es" href="https://luisarevalo.es/blog/claude-equipo/">
+<link rel="alternate" hreflang="en" href="https://luisarevalo.es/en/blog/claude-equipo/">
+<link rel="alternate" hreflang="de" href="https://luisarevalo.es/de/blog/claude-equipo/">
+<link rel="alternate" hreflang="x-default" href="https://luisarevalo.es/en/blog/claude-equipo/">
+<link rel="alternate" type="application/rss+xml" title="Luis Arévalo" href="https://luisarevalo.es/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude como compañero de equipo · Luis Arévalo">
+<meta property="og:description" content="En un congreso de Claude vi cómo un equipo trabaja con la IA dentro de su chat: toma notas, persigue entregas, programa sin que nadie abra el ordenador y vigila los sistemas día y noche. Lo que me llevé y lo que vigilaría.">
+<meta property="og:url" content="https://luisarevalo.es/blog/claude-equipo/">
+<meta property="og:image" content="https://luisarevalo.es/foto-luis.jpg">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-16">
+<script>
+(function () {
+  try {
+    if (!/(^|\.)luisarevalo\.es$/.test(location.hostname)) return;
+    if (/bot|crawl|spider|slurp|facebookexternalhit|linkedinbot/i.test(navigator.userAgent)) return;
+    if (localStorage.getItem('idioma')) return;
+    var prefs = navigator.languages || [navigator.language || ''];
+    var want = 'en';
+    for (var i = 0; i < prefs.length; i++) {
+      var l = String(prefs[i]).slice(0, 2).toLowerCase();
+      if (l === 'es' || l === 'en' || l === 'de') { want = l; break; }
+    }
+    localStorage.setItem('idioma', want);
+    if (want === 'es') return;
+    var alt = document.querySelector('link[rel="alternate"][hreflang="' + want + '"]');
+    if (alt) location.replace(alt.href + location.hash);
+  } catch (e) {}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: una columna estrecha; azul marino de base y naranja de aviación como único acento */
+:root {
+  --bg: #f2f5f9;
+  --surface: #ffffff;
+  --ink: #0f1f33;
+  --muted: #56657a;
+  --line: #d8e0ea;
+  --soft: #e6ecf3;
+  --accent: #dd5a12;
+  --on-ink: #ffffff;
+  --sans: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1522; --surface: #111e2f; --ink: #e8eef5; --muted: #97a6b8; --line: #22344a; --soft: #16263a; --accent: #ff8340; --on-ink: #0b1522;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1522; --surface: #111e2f; --ink: #e8eef5; --muted: #97a6b8; --line: #22344a; --soft: #16263a; --accent: #ff8340; --on-ink: #0b1522;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: text-decoration-color .15s; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 40rem; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Cabecera */
+header.top .wrap { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: 2rem 0; }
+.brand { font-weight: 600; text-decoration: none; }
+nav { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: .9rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+.langs { display: flex; gap: .6rem; }
+.langs a { font-size: .8rem; letter-spacing: .04em; }
+.langs a[aria-current="true"] { color: var(--accent); font-weight: 600; }
+
+h1, h2, h3 { color: var(--ink); font-weight: 600; line-height: 1.2; text-wrap: balance; margin: 0; letter-spacing: -.015em; }
+h1 { font-size: clamp(2rem, 6vw, 2.75rem); letter-spacing: -.03em; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.0625rem; }
+p { margin: 0; }
+
+section { padding-block: 3rem; }
+section + section { border-top: 1px solid var(--line); }
+section .wrap { display: grid; gap: 1.1rem; }
+
+/* Las etiquetas de sección no se muestran: el título basta */
+section > .wrap > .label { display: none; }
+.label { font-size: .85rem; color: var(--muted); }
+
+/* Portada */
+.hero { padding-block: 4rem 3.5rem; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 10rem; align-items: center; gap: 1.5rem 2rem; }
+.hero .intro { display: grid; gap: 1rem; min-width: 0; }
+.hero .intro > .label { display: block; order: 2; font-size: .95rem; color: var(--accent); font-weight: 500; }
+.hero h1 { order: 1; }
+.hero .lede { order: 3; font-size: 1.125rem; color: var(--muted); }
+.hero .lede em { font-style: normal; color: var(--ink); }
+.hero .actions { order: 4; }
+.hero .photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; }
+@media (max-width: 640px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero .photo { order: -1; width: 9rem; aspect-ratio: 1; border-radius: 50%; object-position: 50% 20%; }
+}
+
+.actions { display: flex; gap: 1.4rem; flex-wrap: wrap; align-items: center; margin-top: .3rem; }
+.btn { display: inline-flex; align-items: center; gap: .45rem; font-size: .95rem; font-weight: 500; }
+.btn.primary { background: var(--ink); color: var(--bg); padding: .6rem 1rem; border-radius: 6px; text-decoration: none; }
+.btn.primary:hover { background: var(--accent); color: var(--on-ink); }
+.btn svg { width: 15px; height: 15px; fill: currentColor; }
+.btn.primary::after, .btn.ghost::after { content: "↗\FE0E"; font-size: .85em; color: var(--accent); }
+.btn.primary:hover::after { color: inherit; }
+.btn.ghost::after { content: "↓\FE0E"; }
+
+/* Temas: una línea de texto, sin pastillas */
+.tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .2rem .9rem; color: var(--muted); font-size: .95rem; }
+
+/* Camino */
+.timeline { list-style: none; padding: 0 0 0 1.2rem; margin: .4rem 0 0; display: grid; gap: 2rem; border-left: 2px solid var(--line); }
+.timeline li { position: relative; }
+.timeline li::before { content: ""; position: absolute; left: calc(-1.2rem - 6px); top: .45rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+.timeline li { display: grid; gap: .35rem; }
+.timeline .when { font-size: .85rem; color: var(--accent); font-weight: 500; font-variant-numeric: tabular-nums; }
+.timeline .what { min-width: 0; display: grid; gap: .3rem; }
+.timeline .org { color: var(--muted); font-size: .95rem; }
+.timeline p { margin-top: .2rem; }
+
+/* Último artículo: aviso en la portada y destacado en la lista */
+.hero .latest { order: 5; }
+.latest { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .6rem; justify-self: start; margin-top: .4rem; padding: .55rem .9rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); text-decoration: none; font-size: .95rem; }
+.latest:hover { border-color: var(--accent); color: var(--ink); }
+.latest-label { color: var(--accent); font-weight: 600; font-size: .85rem; }
+.latest-title { font-weight: 500; }
+.latest-date { color: var(--muted); font-weight: 400; }
+.post-link.is-new { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; padding: 1rem 1.1rem; margin-bottom: .6rem; }
+.post-link.is-new h3 { font-weight: 600; }
+.new-badge { justify-self: start; font-size: .75rem; font-weight: 600; color: var(--accent); letter-spacing: .02em; }
+
+/* Blog */
+.topic-filter { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .4rem; }
+.topic { font: inherit; font-size: .9rem; color: var(--muted); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: .35rem .75rem; cursor: pointer; }
+.topic:hover { color: var(--ink); border-color: var(--muted); }
+.topic:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.topic[aria-pressed="true"] { color: var(--bg); background: var(--ink); border-color: var(--ink); }
+.topic .count { font-size: .8em; opacity: .7; font-variant-numeric: tabular-nums; }
+.topic-empty { color: var(--muted); font-size: .95rem; }
+.topics { font-size: .8rem; color: var(--muted); }
+.posts { list-style: none; padding: 0; margin: 0; display: grid; }
+.post-link { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding-block: .9rem; text-decoration: none; color: inherit; }
+a.post-link:hover h3 { color: var(--accent); }
+.post-link .date { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.post-link .body { display: grid; gap: .2rem; min-width: 0; }
+.post-link p { color: var(--muted); font-size: .95rem; }
+.post-link h3 { font-weight: 500; }
+div.post-link h3 { color: var(--muted); }
+.soon { font-size: .8rem; color: var(--accent); }
+
+/* Artículo */
+article section { padding-block: 3rem 4rem; }
+article .wrap { gap: 1.3rem; }
+.post-title { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+article blockquote { margin: 0; padding-left: 1rem; border-left: 3px solid var(--accent); font-size: 1.15rem; color: var(--ink); }
+article .source { font-size: .95rem; color: var(--muted); }
+article .wrap > .label { display: block; }
+.back { font-size: .9rem; color: var(--muted); text-decoration: none; }
+.back:hover { color: var(--ink); }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; padding-block: .9rem; border-block: 1px solid var(--line); font-size: .9rem; }
+.meta div { display: flex; gap: .4rem; }
+.meta .label { font-size: .9rem; }
+.meta strong { font-weight: 500; }
+article h2 { font-size: 1.2rem; margin-top: 1rem; }
+.prompt { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1rem 1.1rem; font-size: .95rem; line-height: 1.6; white-space: pre-wrap; overflow-x: auto; }
+.prompt .label { display: block; margin-bottom: .3rem; font-size: .8rem; }
+article ol, article ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .4rem; }
+.aside { color: var(--muted); font-size: .95rem; }
+
+/* Pie */
+.visits { font-variant-numeric: tabular-nums; }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding-block: 1.6rem 3rem; font-size: .85rem; color: var(--muted); }
+
+@media (max-width: 520px) {
+  .post-link { grid-template-columns: 1fr; gap: .2rem; }
+  nav { gap: .9rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Figura de las dos torres (artículo que-construir) */
+.towers { margin: .6rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.2rem; align-items: stretch; }
+.tower { display: grid; grid-template-rows: auto 1fr; gap: .6rem; min-width: 0; }
+.tower-title { font-size: .9rem; font-weight: 600; text-align: center; text-wrap: balance; }
+article .towers ol.stack { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+.stack li { color: #fff; text-align: center; border-radius: 8px; padding: .32rem .5rem; font-size: .78rem; line-height: 1.25; font-weight: 500; }
+.stack-short li { flex: 1; display: grid; place-items: center; font-size: 1rem; font-weight: 600; border-radius: 14px; background: #8a97a8; }
+.stack-short li:first-child { background: #dd5a12; }
+.stack-tall li { background: color-mix(in srgb, #dd5a12 calc(100% - var(--i) * 7%), #0f1f33); }
+.stack-tall li.is-ui { outline: 2px solid var(--ink); outline-offset: 1px; }
+.towers figcaption { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); text-align: center; }
+
+/* Figura de pasos (artículo higgsfield) */
+.flow { margin: .6rem 0; display: grid; gap: .6rem; }
+article .flow ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: .5rem; counter-reset: none; }
+.flow li { position: relative; display: grid; align-content: start; gap: .45rem; padding: .8rem .7rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; font-size: .85rem; line-height: 1.3; }
+.flow li:last-child { border-color: var(--accent); }
+.step-n { display: grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 600; font-size: .8rem; }
+.flow figcaption { font-size: .85rem; color: var(--muted); text-align: center; }
+@media (max-width: 640px) {
+  article .flow ol { grid-template-columns: 1fr; gap: .4rem; }
+  .flow li { grid-template-columns: auto 1fr; align-items: center; gap: .7rem; padding: .6rem .8rem; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../#inicio">Luis Arévalo</a>
+    <nav aria-label="Secciones">
+      <a href="../../#sobre-mi">Sobre mí</a>
+      <a href="../../#experiencia">Experiencia</a>
+      <a href="../../#blog">Blog</a>
+      <a href="../../#contacto">Contacto</a>
+      <span class="langs" aria-label="Idioma / Language / Sprache"><a href="../../blog/claude-equipo/" hreflang="es" lang="es" aria-current="true">ES</a><a href="../../en/blog/claude-equipo/" hreflang="en" lang="en">EN</a><a href="../../de/blog/claude-equipo/" hreflang="de" lang="de">DE</a></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="post">
+  <section>
+    <div class="wrap">
+      <a class="back" href="../../#blog">← Volver al blog</a>
+      <span class="label">16 de noviembre de 2026 · 6 min de lectura</span>
+      <h1 class="post-title">Claude como compañero de equipo</h1>
+      <p>Hace unos días estuve en un congreso sobre Claude, la IA de Anthropic. Varias personas que la usan a diario contaron sus trucos, y una de ellas me enseñó algo que no se me ha ido de la cabeza: en su empresa, Claude no es una herramienta que cada uno abre en su ordenador. <strong>Es un miembro más del equipo</strong>, con su sitio en el chat donde trabajan todos.</p>
+
+      <h2>Un árbitro dentro del canal</h2>
+      <p>Usan Slack, y en Slack se puede mencionar a Claude igual que mencionas a un compañero. Tienen un canal con todo el equipo y Claude dentro, con un papel muy claro:</p>
+      <ul>
+        <li>toma notas de las reuniones y guarda qué se decidió y quién se encarga de cada cosa;</li>
+        <li>lleva la cuenta del progreso, así que cualquiera puede preguntarle cómo va algo;</li>
+        <li>y avisa a quien no ha entregado lo que tocaba, sin que nadie tenga que hacer de pesado.</li>
+      </ul>
+      <p>Él lo describía como un árbitro: no juega el partido, pero sabe en qué minuto vamos, quién tiene la pelota y cuándo alguien se ha saltado una regla. Y como lo ve todo, es el que mejor puede contar en qué punto está el equipo.</p>
+
+      <h2>Programar sin abrir el ordenador</h2>
+      <p>La segunda parte me pareció increíble. Para cambiar algo de su plataforma o crear una herramienta nueva, esta persona no se sienta delante del ordenador. Habla con Claude, por ejemplo desde el móvil, y Claude se conecta solo al repositorio de GitHub donde vive el código, prepara los cambios y los publica.</p>
+      <p>Lo cuento con cierta ironía, porque esta misma web funciona así. Yo no soy programador. Le explico a Claude lo que quiero, como estoy haciendo con este artículo, él prepara los cambios en GitHub y yo los reviso antes de que salgan. El ordenador puede estar apagado.</p>
+
+      <h2>Vigilar los sistemas como se vigila un avión</h2>
+      <p>La tercera idea era la visibilidad en tiempo real. Tienen bots que revisan de forma constante cómo funcionan sus sistemas: errores, caídas de la base de datos, datos que se pierden. Todo llega al mismo Slack, así que el equipo se entera en el mismo sitio donde ya está hablando.</p>
+      <p>Esto me recordó mucho a la aviación. Un avión moderno envía datos de sus motores y sistemas a tierra mientras vuela. Si algo empieza a ir mal, el equipo de mantenimiento lo sabe antes de que el avión aterrice y puede tener la pieza preparada. No se trata de reaccionar cuando algo se rompe, sino de enterarse antes de que se rompa.</p>
+
+      <h2>Por qué me toca de cerca</h2>
+      <p>En mis proyectos, una parte enorme del tiempo se iba en lo que nadie ve: actas, listas de pendientes, mensajes del tipo "¿cómo va lo tuyo?". En Eurofighter coordinaba a IT, cuatro empresas socias y la OTAN, y mantener a todos al día era casi un trabajo en sí mismo. Si alguien hubiera llevado esa contabilidad por mí, yo habría podido dedicar ese tiempo a decidir y a resolver problemas.</p>
+      <p>Hace unas semanas escribí sobre <a href="../enviados/">un enviado de IA para cada equipo</a>. Lo que vi en el congreso es esa misma idea, pero ya funcionando en una empresa real.</p>
+
+      <h2>Lo que vigilaría</h2>
+      <ul>
+        <li><strong>Que alguien revise antes de publicar.</strong> Que la IA prepare cambios sin que abras el ordenador es fantástico. Que los publique sin que nadie los mire es otra cosa. En aviación ningún cambio vuela sin una segunda firma, y aquí haría lo mismo, al menos en lo importante.</li>
+        <li><strong>Que avise sin agobiar.</strong> Un recordatorio a tiempo ayuda. Diez al día se ignoran, y lo mismo pasa con las alarmas de los sistemas: si todo suena, nada suena.</li>
+        <li><strong>Que el árbitro no se convierta en jefe.</strong> Claude puede llevar la cuenta y recordar, pero las prioridades y las decisiones las tienen que poner las personas.</li>
+        <li><strong>Que tenga acceso solo a lo que necesita.</strong> Un compañero nuevo no recibe todas las llaves el primer día. Con la IA, igual.</li>
+      </ul>
+
+      <h2>Hacia dónde creo que va esto</h2>
+      <p>Creo que en poco tiempo será normal tener a la IA dentro del chat del equipo, no como una ventana aparte que cada uno usa a su manera. Lo que más cambiará no será la velocidad de programar, sino la parte de coordinar: saber en qué punto está todo sin tener que preguntar. Y el trabajo de las personas se moverá hacia decidir, revisar y responder de lo que se publica.</p>
+      <p>Te dejo una pregunta: si mañana tu equipo tuviera un compañero que toma notas, persigue entregas y vigila los sistemas, ¿qué sería lo primero que le encargarías?</p>
+      <p class="source">Las ideas de cómo usan Claude en Slack, en GitHub y para vigilar sus sistemas las contó una persona en un congreso de Claude. La opinión y las previsiones son mías.</p>
+      <a class="back" href="../../#blog">← Volver al blog</a>
+    </div>
+  </section>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Luis Arévalo</span>
+    <span class="visits" id="visitas" data-label="visitas" hidden></span>
+  </div>
+</footer>
+<script>
+// Guarda el idioma que el visitante elige con el selector, para no volver a redirigirle.
+document.querySelectorAll('.langs a').forEach(function (a) {
+  a.addEventListener('click', function () {
+    try { localStorage.setItem('idioma', a.lang); } catch (e) {}
+  });
+});
+
+// Contador de visitas (GoatCounter). Solo se muestra a partir de MIN_VISITAS; si no responde, no se ve nada.
+(function () {
+  var MIN_VISITAS = 500;
+  var el = document.getElementById('visitas');
+  if (!el || !window.fetch || !/luisarevalo\.es$/.test(location.hostname)) return;
+  fetch('https://luisarevalo.goatcounter.com/counter/TOTAL.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.count) return;
+      var n = parseInt(String(d.count).replace(/\D/g, ''), 10);
+      if (!(n >= MIN_VISITAS)) return;
+      el.textContent = n.toLocaleString(document.documentElement.lang || 'es') + ' ' + el.dataset.label;
+      el.hidden = false;
+    })
+    .catch(function () {});
+})();
+
+// Filtro de temas del blog. Las ideas sin publicar solo se ven con "Todos".
+(function () {
+  var bar = document.querySelector('.topic-filter');
+  if (!bar) return;
+  var items = document.querySelectorAll('.posts > li');
+  var empty = document.querySelector('.topic-empty');
+  bar.hidden = false;
+  bar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.topic');
+    if (!btn) return;
+    var topic = btn.dataset.topic;
+    bar.querySelectorAll('.topic').forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+    var shown = 0;
+    items.forEach(function (li) {
+      var tags = (li.dataset.tags || '').split(' ');
+      var show = !topic || tags.indexOf(topic) !== -1;
+      li.hidden = !show;
+      if (show) shown++;
+    });
+    if (empty) empty.hidden = shown > 0;
+  });
+})();
+</script>
+<script data-goatcounter="https://luisarevalo.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
