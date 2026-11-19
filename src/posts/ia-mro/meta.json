@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-19",
+  "tags": [
+    "aviacion",
+    "seguridad",
+    "productividad"
+  ],
+  "es": {
+    "title": "La IA en el mantenimiento: la respuesta ya está escrita",
+    "desc": "En mantenimiento aeronáutico (MRO), la pista del próximo fallo suele estar en miles de partes de texto libre que nadie ha leído. Cómo llevar la IA a esos datos aunque vivan en redes aisladas, y lo que puede cambiar para el negocio.",
+    "read": "5 min de lectura"
+  },
+  "en": {
+    "title": "AI in maintenance: the answer is already written",
+    "desc": "In aircraft maintenance (MRO), the clue to the next failure usually sits in thousands of free-text reports nobody has read. How to bring AI to that data even when it lives on isolated networks, and what it can change for the business.",
+    "read": "5 min read"
+  },
+  "de": {
+    "title": "KI in der Instandhaltung: Die Antwort steht schon da",
+    "desc": "In der Luftfahrt-Instandhaltung (MRO) steckt der Hinweis auf den nächsten Ausfall meist in Tausenden Freitext-Berichten, die niemand gelesen hat. Wie man KI zu diesen Daten bringt, auch wenn sie in abgeschotteten Netzen liegen, und was sich für das Geschäft ändern kann.",
+    "read": "5 Min. Lesezeit"
+  }
+}

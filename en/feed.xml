@@ -6,6 +6,13 @@
   <description>Aerospace engineer in Madrid. I write about what I learn using AI to work better.</description>
   <language>en</language>
   <item>
+    <title>AI in maintenance: the answer is already written</title>
+    <link>https://luisarevalo.es/en/blog/ia-mro/</link>
+    <guid>https://luisarevalo.es/en/blog/ia-mro/</guid>
+    <pubDate>Thu, 19 Nov 2026 08:00:00 +0000</pubDate>
+    <description>In aircraft maintenance (MRO), the clue to the next failure usually sits in thousands of free-text reports nobody has read. How to bring AI to that data even when it lives on isolated networks, and what it can change for the business.</description>
+  </item>
+  <item>
     <title>Claude as a teammate</title>
     <link>https://luisarevalo.es/en/blog/claude-equipo/</link>
     <guid>https://luisarevalo.es/en/blog/claude-equipo/</guid>

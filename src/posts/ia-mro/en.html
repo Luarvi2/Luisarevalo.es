@@ -1,0 +1,32 @@
+<p>40,000 maintenance reports. Nobody has read them all. And the answer to the next failure is probably already in there.</p>
+      <p>In aircraft maintenance, what the industry calls MRO, I have seen this problem many times, especially in military aviation. The information that lets you anticipate a fault is rarely on a dashboard. It is in free text: what a technician wrote when closing a repair, a remark in a test report, a part that was replaced twice in the same month.</p>
+
+      <h2>The problem isn't a lack of data</h2>
+      <p>It's that the data can't be used. For security reasons, those records live on isolated networks with no internet connection. That rules out almost every AI tool on the market. And reviewing them by hand doesn't scale: at three minutes per record, 40,000 records come to about 2,000 hours. More than a year of an engineer's work, just reading.</p>
+      <p>So people analyse a sample, rely on memory and experience, and slowly repeating patterns go unnoticed until they turn into an aircraft on the ground.</p>
+
+      <h2>Bring the AI to the data, not the data to the AI</h2>
+      <p>Today this is technically possible. The big cloud providers run isolated regions for government and classified workloads. In the United States, for example, AWS offers Amazon Bedrock inside them over private connections. Traffic never goes out to the internet, the documents stay in their encrypted storage and the model doesn't learn from them.</p>
+      <p>On that basis, an engineer can ask in plain language: “Which hydraulic system faults come back within 50 flight hours of being repaired?” The system groups reports that describe the same failure in different words, spots components that are failing sooner each time, flags inconsistent records and cites the document behind every conclusion.</p>
+      <p>It's like having a colleague who has read the whole archive, remembers every page and, when they tell you something, shows you where it came from.</p>
+
+      <h2>The business impact</h2>
+      <p>Let's put numbers on an illustrative case (the figures are an example, not from any real programme):</p>
+      <ul>
+        <li><strong>Reading and sorting:</strong> from about 2,000 hours of manual review to a first complete analysis in hours. The engineer only validates the cases the system flags.</li>
+        <li><strong>Coverage:</strong> from sampling to 100% of the records.</li>
+        <li><strong>Availability:</strong> if spotting a trend in time saves a few days of aircraft on ground a year, the investment pays for itself. An unscheduled stop always costs more than a planned intervention.</li>
+      </ul>
+      <p>And what doesn't show up in a spreadsheet:</p>
+      <ul>
+        <li>Decisions based on the full history, not on the memory of whoever has been there longest.</li>
+        <li>Knowledge that isn't lost when a veteran technician retires.</li>
+        <li>Better data quality, because recording errors come to light.</li>
+        <li>Security by design, not as an obstacle.</li>
+      </ul>
+
+      <h2>Where I think this is heading</h2>
+      <p>I think maintenance will be one of the first areas of aviation where AI really gets in, precisely because it doesn't fly: it helps decide on the ground, and the final call still belongs to a licensed person. What will change most isn't the tool but the question: we will stop asking “what failed?” and start asking “what is going to fail?”.</p>
+      <p>AI doesn't replace the technician. It gives back the time they spent searching so they can spend it deciding.</p>
+      <p>A question for you: how much of your organisation's data is stored, protected and unread?</p>
+      <p class="source">An expanded version of a post I published on LinkedIn. The 40,000-record example is made up and doesn't correspond to any real programme. The opinions and predictions are my own.</p>

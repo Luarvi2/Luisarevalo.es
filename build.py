@@ -25,6 +25,7 @@ TAGS = {
     "marketing":     {"es": "Marketing", "en": "Marketing", "de": "Marketing"},
     "seguridad":     {"es": "Seguridad", "en": "Safety", "de": "Sicherheit"},
     "futuro":        {"es": "Previsiones", "en": "Predictions", "de": "Prognosen"},
+    "aviacion":      {"es": "Aviación", "en": "Aviation", "de": "Luftfahrt"},
 }
 FILTER_UI = {
     "es": {"label": "Filtrar por tema", "all": "Todos", "none": "Todavía no hay artículos sobre este tema."},

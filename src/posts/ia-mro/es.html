@@ -1,0 +1,32 @@
+<p>40.000 partes de mantenimiento. Nadie los ha leído todos. Y la respuesta al próximo fallo probablemente ya está ahí.</p>
+      <p>En mantenimiento aeronáutico, lo que en el sector llamamos MRO, he visto este problema muchas veces, sobre todo en aviación militar. La información que permite anticipar una avería no suele estar en un cuadro de mando. Está en texto libre: lo que escribió un técnico al cerrar una reparación, una observación en un informe de pruebas, una pieza que se cambió dos veces en el mismo mes.</p>
+
+      <h2>El problema no es la falta de datos</h2>
+      <p>Es que no se pueden explotar. Por seguridad, esos registros viven en redes aisladas, sin conexión a internet. Eso descarta casi todas las herramientas de IA del mercado. Y revisarlos a mano no escala: si cada registro lleva tres minutos, 40.000 registros son unas 2.000 horas. Más de un año de trabajo de un ingeniero, solo para leer.</p>
+      <p>Así que se analiza una muestra, se tira de memoria y de experiencia, y los patrones que se repiten despacio pasan desapercibidos hasta que se convierten en un avión en tierra.</p>
+
+      <h2>Llevar la IA a los datos, no los datos a la IA</h2>
+      <p>Hoy ya es técnicamente posible. Los grandes proveedores de nube tienen regiones aisladas para cargas gubernamentales y clasificadas. Por ejemplo, en Estados Unidos, AWS ofrece Amazon Bedrock dentro de ellas a través de conexiones privadas. El tráfico no sale a internet, los documentos no se mueven de su almacenamiento cifrado y el modelo no aprende de ellos.</p>
+      <p>Sobre esa base, un ingeniero puede preguntar en lenguaje normal: «¿Qué averías del sistema hidráulico vuelven a aparecer en menos de 50 horas de vuelo después de repararse?». El sistema agrupa partes que describen el mismo fallo con palabras distintas, detecta componentes que fallan cada vez antes, marca registros incoherentes y cita el documento del que sale cada conclusión.</p>
+      <p>Es como tener a un compañero que se ha leído todo el archivo, se acuerda de cada página y, cuando te dice algo, te enseña de dónde lo ha sacado.</p>
+
+      <h2>El impacto en el negocio</h2>
+      <p>Pongamos números a un caso ilustrativo (las cifras son un ejemplo, no de ningún programa real):</p>
+      <ul>
+        <li><strong>Lectura y clasificación:</strong> de unas 2.000 horas de revisión manual a un primer análisis completo en horas. El ingeniero solo valida los casos que el sistema señala.</li>
+        <li><strong>Cobertura:</strong> del análisis por muestreo al 100 % de los registros.</li>
+        <li><strong>Disponibilidad:</strong> si detectar una tendencia a tiempo evita unos pocos días de avión en tierra al año, la inversión se justifica sola. Una parada no programada siempre cuesta más que una intervención planificada.</li>
+      </ul>
+      <p>Y lo que no sale en una hoja de cálculo:</p>
+      <ul>
+        <li>Decisiones basadas en todo el histórico, no en la memoria de quien lleva más años.</li>
+        <li>Conocimiento que no se pierde cuando un técnico veterano se jubila.</li>
+        <li>Mejor calidad de los datos, porque los errores de registro salen a la luz.</li>
+        <li>Seguridad desde el diseño, no como obstáculo.</li>
+      </ul>
+
+      <h2>Hacia dónde creo que va esto</h2>
+      <p>Creo que el mantenimiento será una de las primeras áreas de la aviación donde la IA entre de verdad, precisamente porque no vuela: ayuda a decidir en tierra, y la decisión final sigue siendo de una persona con licencia. Lo que más cambiará no será la herramienta, sino la pregunta: dejaremos de preguntar «¿qué ha fallado?» para preguntar «¿qué va a fallar?».</p>
+      <p>La IA no sustituye al técnico. Le devuelve el tiempo que pasaba buscando para que lo dedique a decidir.</p>
+      <p>Te dejo una pregunta: ¿cuántos datos de tu organización están guardados, protegidos y sin leer?</p>
+      <p class="source">Versión ampliada de un post que publiqué en LinkedIn. El ejemplo de 40.000 registros es inventado y no corresponde a ningún programa real. La opinión y las previsiones son mías.</p>

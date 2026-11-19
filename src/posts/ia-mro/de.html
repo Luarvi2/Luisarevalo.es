@@ -1,0 +1,32 @@
+<p>40.000 Instandhaltungsberichte. Niemand hat sie alle gelesen. Und die Antwort auf den nächsten Ausfall steht wahrscheinlich schon darin.</p>
+      <p>In der Luftfahrt-Instandhaltung, in der Branche MRO genannt, habe ich dieses Problem oft gesehen, vor allem in der militärischen Luftfahrt. Die Information, mit der man einen Defekt vorhersehen könnte, steht selten in einem Dashboard. Sie steckt im Freitext: was ein Techniker beim Abschluss einer Reparatur notiert hat, eine Bemerkung in einem Prüfbericht, ein Bauteil, das im selben Monat zweimal getauscht wurde.</p>
+
+      <h2>Das Problem ist nicht der Mangel an Daten</h2>
+      <p>Sondern dass man sie nicht nutzen kann. Aus Sicherheitsgründen liegen diese Aufzeichnungen in abgeschotteten Netzen ohne Internetverbindung. Damit fallen fast alle KI-Werkzeuge auf dem Markt weg. Und sie von Hand durchzugehen, skaliert nicht: Bei drei Minuten pro Eintrag sind 40.000 Einträge rund 2.000 Stunden. Mehr als ein Arbeitsjahr eines Ingenieurs, nur zum Lesen.</p>
+      <p>Also wertet man eine Stichprobe aus, verlässt sich auf Gedächtnis und Erfahrung, und Muster, die sich langsam wiederholen, bleiben unbemerkt, bis daraus ein Flugzeug am Boden wird.</p>
+
+      <h2>Die KI zu den Daten bringen, nicht die Daten zur KI</h2>
+      <p>Technisch ist das heute möglich. Die großen Cloud-Anbieter betreiben abgeschottete Regionen für staatliche und eingestufte Daten. In den USA zum Beispiel bietet AWS dort Amazon Bedrock über private Verbindungen an. Der Datenverkehr geht nicht ins Internet, die Dokumente bleiben in ihrem verschlüsselten Speicher und das Modell lernt nicht aus ihnen.</p>
+      <p>Auf dieser Grundlage kann ein Ingenieur in normaler Sprache fragen: „Welche Defekte am Hydrauliksystem tauchen innerhalb von 50 Flugstunden nach der Reparatur wieder auf?“ Das System fasst Berichte zusammen, die denselben Fehler mit anderen Worten beschreiben, erkennt Bauteile, die immer früher ausfallen, markiert widersprüchliche Einträge und nennt für jede Schlussfolgerung das Quelldokument.</p>
+      <p>Es ist, als hätte man einen Kollegen, der das ganze Archiv gelesen hat, sich an jede Seite erinnert und einem bei jeder Aussage zeigt, woher sie stammt.</p>
+
+      <h2>Die Wirkung auf das Geschäft</h2>
+      <p>Rechnen wir ein Beispiel durch (die Zahlen sind illustrativ und stammen aus keinem realen Programm):</p>
+      <ul>
+        <li><strong>Lesen und Einordnen:</strong> von rund 2.000 Stunden manueller Prüfung zu einer ersten vollständigen Analyse in Stunden. Der Ingenieur prüft nur die Fälle, die das System markiert.</li>
+        <li><strong>Abdeckung:</strong> von der Stichprobe zu 100 % der Einträge.</li>
+        <li><strong>Verfügbarkeit:</strong> Wenn ein rechtzeitig erkannter Trend ein paar Tage Flugzeug am Boden pro Jahr verhindert, rechnet sich die Investition von selbst. Ein ungeplanter Stillstand kostet immer mehr als ein geplanter Eingriff.</li>
+      </ul>
+      <p>Und was in keiner Tabelle steht:</p>
+      <ul>
+        <li>Entscheidungen auf Basis der gesamten Historie, nicht des Gedächtnisses der Dienstältesten.</li>
+        <li>Wissen, das nicht verloren geht, wenn ein erfahrener Techniker in Rente geht.</li>
+        <li>Bessere Datenqualität, weil Erfassungsfehler sichtbar werden.</li>
+        <li>Sicherheit von Anfang an mitgedacht, nicht als Hindernis.</li>
+      </ul>
+
+      <h2>Wohin das meiner Meinung nach führt</h2>
+      <p>Ich glaube, die Instandhaltung wird einer der ersten Bereiche der Luftfahrt sein, in denen KI wirklich ankommt, gerade weil sie nicht fliegt: Sie hilft am Boden bei Entscheidungen, und das letzte Wort hat weiterhin ein Mensch mit Lizenz. Am meisten ändert sich nicht das Werkzeug, sondern die Frage: Wir hören auf zu fragen „Was ist ausgefallen?“ und fragen stattdessen „Was wird ausfallen?“.</p>
+      <p>Die KI ersetzt den Techniker nicht. Sie gibt ihm die Zeit zurück, die er mit Suchen verbracht hat, damit er sie zum Entscheiden nutzt.</p>
+      <p>Eine Frage an dich: Wie viele Daten deiner Organisation sind gespeichert, geschützt und ungelesen?</p>
+      <p class="source">Erweiterte Fassung eines Beitrags, den ich auf LinkedIn veröffentlicht habe. Das Beispiel mit 40.000 Einträgen ist erfunden und gehört zu keinem realen Programm. Meinung und Prognosen sind meine eigenen.</p>
