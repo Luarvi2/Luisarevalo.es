@@ -201,6 +201,11 @@ article .flow ol { list-style: none; margin: 0; padding: 0; display: grid; grid-
   article .flow ol { grid-template-columns: 1fr; gap: .4rem; }
   .flow li { grid-template-columns: auto 1fr; align-items: center; gap: .7rem; padding: .6rem .8rem; }
 }
+
+/* Imagen dentro de un artículo */
+.post-figure { margin: .6rem 0; display: grid; gap: .6rem; }
+.post-figure img { display: block; width: 100%; max-width: 640px; height: auto; margin: 0 auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.post-figure figcaption { font-size: .85rem; color: var(--muted); text-align: center; }
 </style>
 </head>
 <body>
@@ -231,7 +236,7 @@ article .flow ol { list-style: none; margin: 0; padding: 0; display: grid; grid-
         </a>
         <a class="btn ghost" href="#blog">Read the blog</a>
       </div>
-      <a class="latest" href="blog/ia-mro/"><span class="latest-label">New on the blog<span class="latest-date"> · <time datetime="2026-11-19">Thursday 19/11</time></span></span><span class="latest-title">AI in maintenance: the answer is already written&nbsp;<span aria-hidden="true">→</span></span></a>
+      <a class="latest" href="blog/medir-impacto/"><span class="latest-label">New on the blog<span class="latest-date"> · <time datetime="2026-11-21">Saturday 21/11</time></span></span><span class="latest-title">Do you really know what AI has done for you?&nbsp;<span aria-hidden="true">→</span></span></a>
       </div>
       <img class="photo" src="../foto-luis.jpg" alt="Portrait of Luis Arévalo">
     </div>
@@ -285,12 +290,16 @@ article .flow ol { list-style: none; margin: 0; padding: 0; display: grid; grid-
     <div class="wrap">
       <span class="label">Blog</span>
       <h2>What I'm learning with AI</h2>
-      <div class="topic-filter" role="group" aria-label="Filter by topic" hidden><button type="button" class="topic" data-topic="" aria-pressed="true">All</button><button type="button" class="topic" data-topic="liderazgo" aria-pressed="false">Leadership <span class="count">3</span></button><button type="button" class="topic" data-topic="productividad" aria-pressed="false">Productivity <span class="count">3</span></button><button type="button" class="topic" data-topic="agentes" aria-pressed="false">AI agents <span class="count">2</span></button><button type="button" class="topic" data-topic="equipos" aria-pressed="false">Teams <span class="count">4</span></button><button type="button" class="topic" data-topic="producto" aria-pressed="false">Product <span class="count">1</span></button><button type="button" class="topic" data-topic="marketing" aria-pressed="false">Marketing <span class="count">1</span></button><button type="button" class="topic" data-topic="seguridad" aria-pressed="false">Safety <span class="count">2</span></button><button type="button" class="topic" data-topic="futuro" aria-pressed="false">Predictions <span class="count">7</span></button><button type="button" class="topic" data-topic="aviacion" aria-pressed="false">Aviation <span class="count">2</span></button></div>
+      <div class="topic-filter" role="group" aria-label="Filter by topic" hidden><button type="button" class="topic" data-topic="" aria-pressed="true">All</button><button type="button" class="topic" data-topic="liderazgo" aria-pressed="false">Leadership <span class="count">4</span></button><button type="button" class="topic" data-topic="productividad" aria-pressed="false">Productivity <span class="count">4</span></button><button type="button" class="topic" data-topic="agentes" aria-pressed="false">AI agents <span class="count">2</span></button><button type="button" class="topic" data-topic="equipos" aria-pressed="false">Teams <span class="count">4</span></button><button type="button" class="topic" data-topic="producto" aria-pressed="false">Product <span class="count">1</span></button><button type="button" class="topic" data-topic="marketing" aria-pressed="false">Marketing <span class="count">1</span></button><button type="button" class="topic" data-topic="seguridad" aria-pressed="false">Safety <span class="count">2</span></button><button type="button" class="topic" data-topic="futuro" aria-pressed="false">Predictions <span class="count">7</span></button><button type="button" class="topic" data-topic="aviacion" aria-pressed="false">Aviation <span class="count">2</span></button><button type="button" class="topic" data-topic="datos" aria-pressed="false">Data and measurement <span class="count">1</span></button></div>
       <p class="topic-empty" hidden>No articles on this topic yet.</p>
       <ul class="posts">
-        <li data-tags="aviacion seguridad productividad"><a class="post-link is-new" href="blog/ia-mro/">
+        <li data-tags="datos liderazgo productividad"><a class="post-link is-new" href="blog/medir-impacto/">
+          <span class="date">21 Nov 2026</span>
+          <span class="body"><span class="new-badge">New</span><h3>Do you really know what AI has done for you?</h3><p>Comparing before and after is not enough, and even a clean A/B test does not tell the whole story. Three traps I have seen when measuring the impact of AI tools.</p><span class="topics">Data and measurement · Leadership · Productivity</span></span>
+        </a></li>
+        <li data-tags="aviacion seguridad productividad"><a class="post-link" href="blog/ia-mro/">
           <span class="date">19 Nov 2026</span>
-          <span class="body"><span class="new-badge">New</span><h3>AI in maintenance: the answer is already written</h3><p>In aircraft maintenance (MRO), the clue to the next failure usually sits in thousands of free-text reports nobody has read. How to bring AI to that data even when it lives on isolated networks, and what it can change for the business.</p><span class="topics">Aviation · Safety · Productivity</span></span>
+          <span class="body"><h3>AI in maintenance: the answer is already written</h3><p>In aircraft maintenance (MRO), the clue to the next failure usually sits in thousands of free-text reports nobody has read. How to bring AI to that data even when it lives on isolated networks, and what it can change for the business.</p><span class="topics">Aviation · Safety · Productivity</span></span>
         </a></li>
         <li data-tags="agentes equipos productividad futuro"><a class="post-link" href="blog/claude-equipo/">
           <span class="date">16 Nov 2026</span>

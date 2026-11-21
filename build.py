@@ -26,6 +26,7 @@ TAGS = {
     "seguridad":     {"es": "Seguridad", "en": "Safety", "de": "Sicherheit"},
     "futuro":        {"es": "Previsiones", "en": "Predictions", "de": "Prognosen"},
     "aviacion":      {"es": "Aviación", "en": "Aviation", "de": "Luftfahrt"},
+    "datos":         {"es": "Datos y medición", "en": "Data and measurement", "de": "Daten und Messung"},
 }
 FILTER_UI = {
     "es": {"label": "Filtrar por tema", "all": "Todos", "none": "Todavía no hay artículos sobre este tema."},

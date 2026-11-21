@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-21",
+  "tags": [
+    "datos",
+    "liderazgo",
+    "productividad"
+  ],
+  "es": {
+    "title": "¿De verdad sabes cuánto te ha aportado la IA?",
+    "desc": "Comparar el antes y el después no basta, y un test A/B bien hecho tampoco cuenta toda la historia. Tres trampas que he visto al medir el impacto de las herramientas de IA.",
+    "read": "5 min de lectura"
+  },
+  "en": {
+    "title": "Do you really know what AI has done for you?",
+    "desc": "Comparing before and after is not enough, and even a clean A/B test does not tell the whole story. Three traps I have seen when measuring the impact of AI tools.",
+    "read": "5 min read"
+  },
+  "de": {
+    "title": "Weißt du wirklich, was dir die KI gebracht hat?",
+    "desc": "Ein Vorher-nachher-Vergleich reicht nicht, und selbst ein sauberer A/B-Test erzählt nicht die ganze Geschichte. Drei Fallen, die ich beim Messen der Wirkung von KI-Werkzeugen gesehen habe.",
+    "read": "5 Min. Lesezeit"
+  }
+}
